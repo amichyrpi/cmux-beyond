@@ -1,7 +1,7 @@
 <h1 align="center">cmux</h1>
 <p align="center">A Ghostty-based macOS terminal with vertical tabs and notifications for AI coding agents</p>
 
-**This is a fork of [cmux](https://github.com/manaflow-ai/cmux) and it's not meant to be used by other users.**
+<h1 align="center" font=>This is a fork of [cmux](https://github.com/manaflow-ai/cmux) and it's not meant to be used by other users.</h1>
 
 <p align="center">
   <a href="https://github.com/manaflow-ai/cmux/releases/latest/download/cmux-macos.dmg">
