@@ -1,0 +1,54 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/cmux-core",
+    "crates/cmux-app",
+]
+
+[workspace.package]
+version = "0.0.1"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/manaflow-ai/cmux"
+rust-version = "1.77"
+
+[workspace.dependencies]
+# Core
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+anyhow = "1"
+thiserror = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# IPC / async
+tokio = { version = "1", features = ["full"] }
+interprocess = { version = "2", features = ["tokio"] }
+
+# Terminal core (Phase 6)
+alacritty_terminal = "0.24"
+portable-pty = "0.8"
+
+# Utilities
+regex = "1"
+dirs = "5"
+uuid = { version = "1", features = ["v4", "serde"] }
+parking_lot = "0.12"
+
+# Tauri (app crate)
+tauri = { version = "2", features = [] }
+tauri-build = "2"
+tauri-plugin-shell = "2"
+tauri-plugin-updater = "2"
+tauri-plugin-clipboard-manager = "2"
+tauri-plugin-notification = "2"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+strip = true
+
+[profile.dev]
+opt-level = 1

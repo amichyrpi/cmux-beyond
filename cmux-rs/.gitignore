@@ -1,0 +1,6 @@
+target/
+**/*.rs.bk
+Cargo.lock
+node_modules/
+ui/dist/
+ui/.vite/
