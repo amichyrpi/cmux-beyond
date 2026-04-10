@@ -148,87 +148,87 @@ For mer informasjon om hvordan du konfigurerer cmux, [gå til dokumentasjonen v�
 
 ### Arbeidsområder
 
-| Snarvei | Handling |
-|----------|--------|
-| ⌘ N | Nytt arbeidsområde |
-| ⌘ 1–8 | Hopp til arbeidsområde 1–8 |
-| ⌘ 9 | Hopp til siste arbeidsområde |
-| ⌃ ⌘ ] | Neste arbeidsområde |
-| ⌃ ⌘ [ | Forrige arbeidsområde |
-| ⌘ ⇧ W | Lukk arbeidsområde |
-| ⌘ ⇧ R | Gi nytt navn til arbeidsområde |
-| ⌘ B | Vis/skjul sidefelt |
+| Snarvei | Handling                       |
+| ------- | ------------------------------ |
+| ⌘ N     | Nytt arbeidsområde             |
+| ⌘ 1–8   | Hopp til arbeidsområde 1–8     |
+| ⌘ 9     | Hopp til siste arbeidsområde   |
+| ⌃ ⌘ ]   | Neste arbeidsområde            |
+| ⌃ ⌘ [   | Forrige arbeidsområde          |
+| ⌘ ⇧ W   | Lukk arbeidsområde             |
+| ⌘ ⇧ R   | Gi nytt navn til arbeidsområde |
+| ⌘ B     | Vis/skjul sidefelt             |
 
 ### Overflater
 
-| Snarvei | Handling |
-|----------|--------|
-| ⌘ T | Ny overflate |
-| ⌘ ⇧ ] | Neste overflate |
-| ⌘ ⇧ [ | Forrige overflate |
-| ⌃ Tab | Neste overflate |
-| ⌃ ⇧ Tab | Forrige overflate |
-| ⌃ 1–8 | Hopp til overflate 1–8 |
-| ⌃ 9 | Hopp til siste overflate |
-| ⌘ W | Lukk overflate |
+| Snarvei | Handling                 |
+| ------- | ------------------------ |
+| ⌘ T     | Ny overflate             |
+| ⌘ ⇧ ]   | Neste overflate          |
+| ⌘ ⇧ [   | Forrige overflate        |
+| ⌃ Tab   | Neste overflate          |
+| ⌃ ⇧ Tab | Forrige overflate        |
+| ⌃ 1–8   | Hopp til overflate 1–8   |
+| ⌃ 9     | Hopp til siste overflate |
+| ⌘ W     | Lukk overflate           |
 
 ### Delte paneler
 
-| Snarvei | Handling |
-|----------|--------|
-| ⌘ D | Del til høyre |
-| ⌘ ⇧ D | Del nedover |
+| Snarvei     | Handling                |
+| ----------- | ----------------------- |
+| ⌘ D         | Del til høyre           |
+| ⌘ ⇧ D       | Del nedover             |
 | ⌥ ⌘ ← → ↑ ↓ | Fokuser panel i retning |
-| ⌘ ⇧ H | Blink fokusert panel |
+| ⌘ ⇧ H       | Blink fokusert panel    |
 
 ### Nettleser
 
 Nettleserens utviklerverktøysnarveier følger Safari-standarder og kan tilpasses i `Innstillinger → Tastatursnarveier`.
 
-| Snarvei | Handling |
-|----------|--------|
-| ⌘ ⇧ L | Åpne nettleser i deling |
-| ⌘ L | Fokuser adressefeltet |
-| ⌘ [ | Tilbake |
-| ⌘ ] | Fremover |
-| ⌘ R | Last inn siden på nytt |
-| ⌥ ⌘ I | Vis/skjul utviklerverktøy (Safari-standard) |
-| ⌥ ⌘ C | Vis JavaScript-konsoll (Safari-standard) |
+| Snarvei | Handling                                    |
+| ------- | ------------------------------------------- |
+| ⌘ ⇧ L   | Åpne nettleser i deling                     |
+| ⌘ L     | Fokuser adressefeltet                       |
+| ⌘ [     | Tilbake                                     |
+| ⌘ ]     | Fremover                                    |
+| ⌘ R     | Last inn siden på nytt                      |
+| ⌥ ⌘ I   | Vis/skjul utviklerverktøy (Safari-standard) |
+| ⌥ ⌘ C   | Vis JavaScript-konsoll (Safari-standard)    |
 
 ### Varsler
 
-| Snarvei | Handling |
-|----------|--------|
-| ⌘ I | Vis varselpanel |
-| ⌘ ⇧ U | Hopp til nyeste uleste |
+| Snarvei | Handling               |
+| ------- | ---------------------- |
+| ⌘ I     | Vis varselpanel        |
+| ⌘ ⇧ U   | Hopp til nyeste uleste |
 
 ### Søk
 
-| Snarvei | Handling |
-|----------|--------|
-| ⌘ F | Søk |
+| Snarvei     | Handling            |
+| ----------- | ------------------- |
+| ⌘ F         | Søk                 |
 | ⌘ G / ⌘ ⇧ G | Søk neste / forrige |
-| ⌘ ⇧ F | Skjul søkelinje |
-| ⌘ E | Bruk utvalg til søk |
+| ⌘ ⇧ F       | Skjul søkelinje     |
+| ⌘ E         | Bruk utvalg til søk |
 
 ### Terminal
 
-| Snarvei | Handling |
-|----------|--------|
-| ⌘ K | Tøm rullingshistorikk |
-| ⌘ C | Kopier (med utvalg) |
-| ⌘ V | Lim inn |
+| Snarvei   | Handling                     |
+| --------- | ---------------------------- |
+| ⌘ K       | Tøm rullingshistorikk        |
+| ⌘ C       | Kopier (med utvalg)          |
+| ⌘ V       | Lim inn                      |
 | ⌘ + / ⌘ - | Øk / reduser skriftstørrelse |
-| ⌘ 0 | Tilbakestill skriftstørrelse |
+| ⌘ 0       | Tilbakestill skriftstørrelse |
 
 ### Vindu
 
-| Snarvei | Handling |
-|----------|--------|
-| ⌘ ⇧ N | Nytt vindu |
-| ⌘ , | Innstillinger |
-| ⌘ ⇧ , | Last inn konfigurasjon på nytt |
-| ⌘ Q | Avslutt |
+| Snarvei | Handling                       |
+| ------- | ------------------------------ |
+| ⌘ ⇧ N   | Nytt vindu                     |
+| ⌘ ,     | Innstillinger                  |
+| ⌘ ⇧ ,   | Last inn konfigurasjon på nytt |
+| ⌘ Q     | Avslutt                        |
 
 ## Nattlige bygg
 
@@ -239,6 +239,7 @@ cmux NIGHTLY er en separat app med sin egen bundle-ID, så den kjører ved siden
 ## Sesjonssgjenoppretting (nåværende oppførsel)
 
 Ved omstart gjenoppretter cmux for øyeblikket kun applayouten og metadata:
+
 - Vindu-/arbeidsområde-/panellayout
 - Arbeidsmapper
 - Terminal-rullingshistorikk (best effort)

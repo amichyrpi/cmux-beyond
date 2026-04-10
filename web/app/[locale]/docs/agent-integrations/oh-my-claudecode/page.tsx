@@ -2,7 +2,11 @@ import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { CodeBlock } from "../../../components/code-block";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "docs.ohMyClaudeCode" });
   return {
@@ -58,8 +62,18 @@ cmux omc --watch`}</CodeBlock>
           </tr>
         </thead>
         <tbody>
-          <tr><td><code>~/.cmuxterm/omc-bin/</code></td><td>{t("dirShim")}</td></tr>
-          <tr><td><code>~/.cmuxterm/tmux-compat-store.json</code></td><td>{t("dirStore")}</td></tr>
+          <tr>
+            <td>
+              <code>~/.cmuxterm/omc-bin/</code>
+            </td>
+            <td>{t("dirShim")}</td>
+          </tr>
+          <tr>
+            <td>
+              <code>~/.cmuxterm/tmux-compat-store.json</code>
+            </td>
+            <td>{t("dirStore")}</td>
+          </tr>
         </tbody>
       </table>
 
@@ -72,9 +86,24 @@ cmux omc --watch`}</CodeBlock>
           </tr>
         </thead>
         <tbody>
-          <tr><td><code>TMUX</code></td><td>{t("envTmux")}</td></tr>
-          <tr><td><code>TMUX_PANE</code></td><td>{t("envTmuxPane")}</td></tr>
-          <tr><td><code>CMUX_SOCKET_PATH</code></td><td>{t("envSocket")}</td></tr>
+          <tr>
+            <td>
+              <code>TMUX</code>
+            </td>
+            <td>{t("envTmux")}</td>
+          </tr>
+          <tr>
+            <td>
+              <code>TMUX_PANE</code>
+            </td>
+            <td>{t("envTmuxPane")}</td>
+          </tr>
+          <tr>
+            <td>
+              <code>CMUX_SOCKET_PATH</code>
+            </td>
+            <td>{t("envSocket")}</td>
+          </tr>
         </tbody>
       </table>
     </>

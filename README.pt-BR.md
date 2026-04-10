@@ -148,87 +148,87 @@ Para mais informações sobre como configurar o cmux, [acesse nossa documentaç�
 
 ### Áreas de Trabalho
 
-| Atalho | Ação |
-|----------|--------|
-| ⌘ N | Novo workspace |
-| ⌘ 1–8 | Ir para workspace 1–8 |
-| ⌘ 9 | Ir para último workspace |
-| ⌃ ⌘ ] | Próximo workspace |
-| ⌃ ⌘ [ | Workspace anterior |
-| ⌘ ⇧ W | Fechar workspace |
-| ⌘ ⇧ R | Renomear workspace |
-| ⌘ B | Alternar barra lateral |
+| Atalho | Ação                     |
+| ------ | ------------------------ |
+| ⌘ N    | Novo workspace           |
+| ⌘ 1–8  | Ir para workspace 1–8    |
+| ⌘ 9    | Ir para último workspace |
+| ⌃ ⌘ ]  | Próximo workspace        |
+| ⌃ ⌘ [  | Workspace anterior       |
+| ⌘ ⇧ W  | Fechar workspace         |
+| ⌘ ⇧ R  | Renomear workspace       |
+| ⌘ B    | Alternar barra lateral   |
 
 ### Superfícies
 
-| Atalho | Ação |
-|----------|--------|
-| ⌘ T | Nova surface |
-| ⌘ ⇧ ] | Próxima surface |
-| ⌘ ⇧ [ | Surface anterior |
-| ⌃ Tab | Próxima surface |
-| ⌃ ⇧ Tab | Surface anterior |
-| ⌃ 1–8 | Ir para surface 1–8 |
-| ⌃ 9 | Ir para última surface |
-| ⌘ W | Fechar surface |
+| Atalho  | Ação                   |
+| ------- | ---------------------- |
+| ⌘ T     | Nova surface           |
+| ⌘ ⇧ ]   | Próxima surface        |
+| ⌘ ⇧ [   | Surface anterior       |
+| ⌃ Tab   | Próxima surface        |
+| ⌃ ⇧ Tab | Surface anterior       |
+| ⌃ 1–8   | Ir para surface 1–8    |
+| ⌃ 9     | Ir para última surface |
+| ⌘ W     | Fechar surface         |
 
 ### Painéis Divididos
 
-| Atalho | Ação |
-|----------|--------|
-| ⌘ D | Dividir à direita |
-| ⌘ ⇧ D | Dividir para baixo |
+| Atalho      | Ação                         |
+| ----------- | ---------------------------- |
+| ⌘ D         | Dividir à direita            |
+| ⌘ ⇧ D       | Dividir para baixo           |
 | ⌥ ⌘ ← → ↑ ↓ | Focar painel direcionalmente |
-| ⌘ ⇧ H | Piscar painel focado |
+| ⌘ ⇧ H       | Piscar painel focado         |
 
 ### Navegador
 
 Os atalhos de ferramentas do desenvolvedor do navegador seguem os padrões do Safari e podem ser personalizados em `Configurações → Atalhos de Teclado`.
 
-| Atalho | Ação |
-|----------|--------|
-| ⌘ ⇧ L | Abrir navegador em divisão |
-| ⌘ L | Focar barra de endereço |
-| ⌘ [ | Voltar |
-| ⌘ ] | Avançar |
-| ⌘ R | Recarregar página |
-| ⌥ ⌘ I | Alternar Ferramentas do Desenvolvedor (padrão Safari) |
-| ⌥ ⌘ C | Mostrar Console JavaScript (padrão Safari) |
+| Atalho | Ação                                                  |
+| ------ | ----------------------------------------------------- |
+| ⌘ ⇧ L  | Abrir navegador em divisão                            |
+| ⌘ L    | Focar barra de endereço                               |
+| ⌘ [    | Voltar                                                |
+| ⌘ ]    | Avançar                                               |
+| ⌘ R    | Recarregar página                                     |
+| ⌥ ⌘ I  | Alternar Ferramentas do Desenvolvedor (padrão Safari) |
+| ⌥ ⌘ C  | Mostrar Console JavaScript (padrão Safari)            |
 
 ### Notificações
 
-| Atalho | Ação |
-|----------|--------|
-| ⌘ I | Mostrar painel de notificações |
-| ⌘ ⇧ U | Ir para última não lida |
+| Atalho | Ação                           |
+| ------ | ------------------------------ |
+| ⌘ I    | Mostrar painel de notificações |
+| ⌘ ⇧ U  | Ir para última não lida        |
 
 ### Busca
 
-| Atalho | Ação |
-|----------|--------|
-| ⌘ F | Buscar |
+| Atalho      | Ação                      |
+| ----------- | ------------------------- |
+| ⌘ F         | Buscar                    |
 | ⌘ G / ⌘ ⇧ G | Buscar próximo / anterior |
-| ⌘ ⇧ F | Ocultar barra de busca |
-| ⌘ E | Usar seleção para busca |
+| ⌘ ⇧ F       | Ocultar barra de busca    |
+| ⌘ E         | Usar seleção para busca   |
 
 ### Terminal
 
-| Atalho | Ação |
-|----------|--------|
-| ⌘ K | Limpar histórico de rolagem |
-| ⌘ C | Copiar (com seleção) |
-| ⌘ V | Colar |
+| Atalho    | Ação                                 |
+| --------- | ------------------------------------ |
+| ⌘ K       | Limpar histórico de rolagem          |
+| ⌘ C       | Copiar (com seleção)                 |
+| ⌘ V       | Colar                                |
 | ⌘ + / ⌘ - | Aumentar / diminuir tamanho da fonte |
-| ⌘ 0 | Redefinir tamanho da fonte |
+| ⌘ 0       | Redefinir tamanho da fonte           |
 
 ### Janela
 
-| Atalho | Ação |
-|----------|--------|
-| ⌘ ⇧ N | Nova janela |
-| ⌘ , | Configurações |
-| ⌘ ⇧ , | Recarregar configuração |
-| ⌘ Q | Sair |
+| Atalho | Ação                    |
+| ------ | ----------------------- |
+| ⌘ ⇧ N  | Nova janela             |
+| ⌘ ,    | Configurações           |
+| ⌘ ⇧ ,  | Recarregar configuração |
+| ⌘ Q    | Sair                    |
 
 ## Builds Noturnos
 
@@ -239,6 +239,7 @@ O cmux NIGHTLY é um app separado com seu próprio bundle ID, então roda ao lad
 ## Restauração de sessão (comportamento atual)
 
 Ao reiniciar, o cmux atualmente restaura apenas o layout do app e metadados:
+
 - Layout de janelas/workspaces/painéis
 - Diretórios de trabalho
 - Histórico de rolagem do terminal (melhor esforço)

@@ -176,7 +176,11 @@ export const testimonials = [
 
 export type Testimonial = (typeof testimonials)[number];
 
-export function PlatformIcon({ platform }: { platform: "x" | "hn" | "reddit" }) {
+export function PlatformIcon({
+  platform,
+}: {
+  platform: "x" | "hn" | "reddit";
+}) {
   if (platform === "x") {
     return (
       <svg
@@ -204,12 +208,7 @@ export function PlatformIcon({ platform }: { platform: "x" | "hn" | "reddit" }) 
     );
   }
   return (
-    <svg
-      width="14"
-      height="14"
-      viewBox="0 0 256 256"
-      className="text-muted"
-    >
+    <svg width="14" height="14" viewBox="0 0 256 256" className="text-muted">
       <rect width="256" height="256" rx="28" fill="#ff6600" />
       <text
         x="128"
@@ -254,7 +253,7 @@ function langFamily(locale: string): string {
 export function getTestimonialTranslation(
   testimonial: Testimonial,
   locale: string,
-  t: (key: string) => string
+  t: (key: string) => string,
 ): string | null {
   if (langFamily(locale) === langFamily(testimonial.lang)) {
     return null;
@@ -293,9 +292,7 @@ export function TestimonialCard({
           <Initials name={testimonial.name} />
         )}
         <div className="min-w-0 flex-1">
-          <div className="font-medium text-sm truncate">
-            {testimonial.name}
-          </div>
+          <div className="font-medium text-sm truncate">{testimonial.name}</div>
           {"subtitle" in testimonial && testimonial.subtitle && (
             <div className="text-xs text-muted truncate">
               {testimonial.subtitle}
@@ -311,9 +308,7 @@ export function TestimonialCard({
         {testimonial.text}
       </p>
       {translation && (
-        <p className="text-xs text-muted/60 mt-1.5 italic">
-          {translation}
-        </p>
+        <p className="text-xs text-muted/60 mt-1.5 italic">{translation}</p>
       )}
     </a>
   );

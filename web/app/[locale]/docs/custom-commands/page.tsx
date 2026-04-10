@@ -4,7 +4,11 @@ import { buildAlternates } from "../../../../i18n/seo";
 import { CodeBlock } from "../../components/code-block";
 import { Callout } from "../../components/callout";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "docs.customCommands" });
   return {
@@ -26,10 +30,12 @@ export default function CustomCommandsPage() {
       <p>{t("fileLocationsDesc")}</p>
       <ul>
         <li>
-          <strong>{t("localConfig")}</strong> <code>./cmux.json</code> &mdash; {t("localConfigDesc")}
+          <strong>{t("localConfig")}</strong> <code>./cmux.json</code> &mdash;{" "}
+          {t("localConfigDesc")}
         </li>
         <li>
-          <strong>{t("globalConfig")}</strong> <code>~/.config/cmux/cmux.json</code> &mdash; {t("globalConfigDesc")}
+          <strong>{t("globalConfig")}</strong>{" "}
+          <code>~/.config/cmux/cmux.json</code> &mdash; {t("globalConfigDesc")}
         </li>
       </ul>
       <Callout type="info">{t("precedenceNote")}</Callout>
@@ -67,13 +73,28 @@ export default function CustomCommandsPage() {
 
       <h3>{t("simpleCommandFields")}</h3>
       <ul>
-        <li><code>name</code> &mdash; {t("fieldName")}</li>
-        <li><code>description</code> &mdash; {t("fieldDescription")}</li>
-        <li><code>keywords</code> &mdash; {t("fieldKeywords")}</li>
-        <li><code>command</code> &mdash; {t("fieldCommand")}</li>
-        <li><code>confirm</code> &mdash; {t("fieldConfirm")}</li>
+        <li>
+          <code>name</code> &mdash; {t("fieldName")}
+        </li>
+        <li>
+          <code>description</code> &mdash; {t("fieldDescription")}
+        </li>
+        <li>
+          <code>keywords</code> &mdash; {t("fieldKeywords")}
+        </li>
+        <li>
+          <code>command</code> &mdash; {t("fieldCommand")}
+        </li>
+        <li>
+          <code>confirm</code> &mdash; {t("fieldConfirm")}
+        </li>
       </ul>
-      <p>{t("simpleCommandCwdNote")} <code>{"cd \"$(git rev-parse --show-toplevel)\" &&"}</code> {t("simpleCommandCwdRepoRoot")} <code>{"cd /your/path &&"}</code> {t("simpleCommandCwdCustomPath")}</p>
+      <p>
+        {t("simpleCommandCwdNote")}{" "}
+        <code>{'cd "$(git rev-parse --show-toplevel)" &&'}</code>{" "}
+        {t("simpleCommandCwdRepoRoot")} <code>{"cd /your/path &&"}</code>{" "}
+        {t("simpleCommandCwdCustomPath")}
+      </p>
 
       <h2>{t("workspaceCommands")}</h2>
       <p>{t("workspaceCommandsDesc")}</p>
@@ -124,18 +145,32 @@ export default function CustomCommandsPage() {
 
       <h3>{t("workspaceFields")}</h3>
       <ul>
-        <li><code>name</code> &mdash; {t("wsFieldName")}</li>
-        <li><code>cwd</code> &mdash; {t("wsFieldCwd")}</li>
-        <li><code>color</code> &mdash; {t("wsFieldColor")}</li>
-        <li><code>layout</code> &mdash; {t("wsFieldLayout")}</li>
+        <li>
+          <code>name</code> &mdash; {t("wsFieldName")}
+        </li>
+        <li>
+          <code>cwd</code> &mdash; {t("wsFieldCwd")}
+        </li>
+        <li>
+          <code>color</code> &mdash; {t("wsFieldColor")}
+        </li>
+        <li>
+          <code>layout</code> &mdash; {t("wsFieldLayout")}
+        </li>
       </ul>
 
       <h3>{t("restartBehavior")}</h3>
       <p>{t("restartBehaviorDesc")}</p>
       <ul>
-        <li><code>&quot;ignore&quot;</code> &mdash; {t("restartIgnore")}</li>
-        <li><code>&quot;recreate&quot;</code> &mdash; {t("restartRecreate")}</li>
-        <li><code>&quot;confirm&quot;</code> &mdash; {t("restartConfirm")}</li>
+        <li>
+          <code>&quot;ignore&quot;</code> &mdash; {t("restartIgnore")}
+        </li>
+        <li>
+          <code>&quot;recreate&quot;</code> &mdash; {t("restartRecreate")}
+        </li>
+        <li>
+          <code>&quot;confirm&quot;</code> &mdash; {t("restartConfirm")}
+        </li>
       </ul>
 
       <h2>{t("layoutTree")}</h2>
@@ -144,9 +179,16 @@ export default function CustomCommandsPage() {
       <h3>{t("splitNode")}</h3>
       <p>{t("splitNodeDesc")}</p>
       <ul>
-        <li><code>direction</code> &mdash; <code>&quot;horizontal&quot;</code> {t("or")} <code>&quot;vertical&quot;</code></li>
-        <li><code>split</code> &mdash; {t("splitPosition")}</li>
-        <li><code>children</code> &mdash; {t("splitChildren")}</li>
+        <li>
+          <code>direction</code> &mdash; <code>&quot;horizontal&quot;</code>{" "}
+          {t("or")} <code>&quot;vertical&quot;</code>
+        </li>
+        <li>
+          <code>split</code> &mdash; {t("splitPosition")}
+        </li>
+        <li>
+          <code>children</code> &mdash; {t("splitChildren")}
+        </li>
       </ul>
 
       <h3>{t("paneNode")}</h3>
@@ -155,21 +197,44 @@ export default function CustomCommandsPage() {
       <h2>{t("surfaceDefinition")}</h2>
       <p>{t("surfaceDefinitionDesc")}</p>
       <ul>
-        <li><code>type</code> &mdash; <code>&quot;terminal&quot;</code> {t("or")} <code>&quot;browser&quot;</code></li>
-        <li><code>name</code> &mdash; {t("surfaceName")}</li>
-        <li><code>command</code> &mdash; {t("surfaceCommand")}</li>
-        <li><code>cwd</code> &mdash; {t("surfaceCwd")}</li>
-        <li><code>env</code> &mdash; {t("surfaceEnv")}</li>
-        <li><code>url</code> &mdash; {t("surfaceUrl")}</li>
-        <li><code>focus</code> &mdash; {t("surfaceFocus")}</li>
+        <li>
+          <code>type</code> &mdash; <code>&quot;terminal&quot;</code> {t("or")}{" "}
+          <code>&quot;browser&quot;</code>
+        </li>
+        <li>
+          <code>name</code> &mdash; {t("surfaceName")}
+        </li>
+        <li>
+          <code>command</code> &mdash; {t("surfaceCommand")}
+        </li>
+        <li>
+          <code>cwd</code> &mdash; {t("surfaceCwd")}
+        </li>
+        <li>
+          <code>env</code> &mdash; {t("surfaceEnv")}
+        </li>
+        <li>
+          <code>url</code> &mdash; {t("surfaceUrl")}
+        </li>
+        <li>
+          <code>focus</code> &mdash; {t("surfaceFocus")}
+        </li>
       </ul>
 
       <h3>{t("cwdResolution")}</h3>
       <ul>
-        <li><code>.</code> {t("or")} {t("omitted")} &mdash; {t("cwdRelative")}</li>
-        <li><code>./subdir</code> &mdash; {t("cwdSubdir")}</li>
-        <li><code>~/path</code> &mdash; {t("cwdHome")}</li>
-        <li>{t("absolutePath")} &mdash; {t("cwdAbsolute")}</li>
+        <li>
+          <code>.</code> {t("or")} {t("omitted")} &mdash; {t("cwdRelative")}
+        </li>
+        <li>
+          <code>./subdir</code> &mdash; {t("cwdSubdir")}
+        </li>
+        <li>
+          <code>~/path</code> &mdash; {t("cwdHome")}
+        </li>
+        <li>
+          {t("absolutePath")} &mdash; {t("cwdAbsolute")}
+        </li>
       </ul>
 
       <h2>{t("fullExample")}</h2>

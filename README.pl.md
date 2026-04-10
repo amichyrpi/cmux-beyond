@@ -148,87 +148,87 @@ Więcej informacji o konfiguracji cmux znajdziesz w [naszej dokumentacji](https:
 
 ### Przestrzenie robocze
 
-| Skrót | Akcja |
-|----------|--------|
-| ⌘ N | Nowa przestrzeń robocza |
-| ⌘ 1–8 | Przejdź do przestrzeni roboczej 1–8 |
-| ⌘ 9 | Przejdź do ostatniej przestrzeni roboczej |
-| ⌃ ⌘ ] | Następna przestrzeń robocza |
-| ⌃ ⌘ [ | Poprzednia przestrzeń robocza |
-| ⌘ ⇧ W | Zamknij przestrzeń roboczą |
-| ⌘ ⇧ R | Zmień nazwę przestrzeni roboczej |
-| ⌘ B | Przełącz pasek boczny |
+| Skrót | Akcja                                     |
+| ----- | ----------------------------------------- |
+| ⌘ N   | Nowa przestrzeń robocza                   |
+| ⌘ 1–8 | Przejdź do przestrzeni roboczej 1–8       |
+| ⌘ 9   | Przejdź do ostatniej przestrzeni roboczej |
+| ⌃ ⌘ ] | Następna przestrzeń robocza               |
+| ⌃ ⌘ [ | Poprzednia przestrzeń robocza             |
+| ⌘ ⇧ W | Zamknij przestrzeń roboczą                |
+| ⌘ ⇧ R | Zmień nazwę przestrzeni roboczej          |
+| ⌘ B   | Przełącz pasek boczny                     |
 
 ### Powierzchnie
 
-| Skrót | Akcja |
-|----------|--------|
-| ⌘ T | Nowa powierzchnia |
-| ⌘ ⇧ ] | Następna powierzchnia |
-| ⌘ ⇧ [ | Poprzednia powierzchnia |
-| ⌃ Tab | Następna powierzchnia |
-| ⌃ ⇧ Tab | Poprzednia powierzchnia |
-| ⌃ 1–8 | Przejdź do powierzchni 1–8 |
-| ⌃ 9 | Przejdź do ostatniej powierzchni |
-| ⌘ W | Zamknij powierzchnię |
+| Skrót   | Akcja                            |
+| ------- | -------------------------------- |
+| ⌘ T     | Nowa powierzchnia                |
+| ⌘ ⇧ ]   | Następna powierzchnia            |
+| ⌘ ⇧ [   | Poprzednia powierzchnia          |
+| ⌃ Tab   | Następna powierzchnia            |
+| ⌃ ⇧ Tab | Poprzednia powierzchnia          |
+| ⌃ 1–8   | Przejdź do powierzchni 1–8       |
+| ⌃ 9     | Przejdź do ostatniej powierzchni |
+| ⌘ W     | Zamknij powierzchnię             |
 
 ### Podzielone Panele
 
-| Skrót | Akcja |
-|----------|--------|
-| ⌘ D | Podziel w prawo |
-| ⌘ ⇧ D | Podziel w dół |
-| ⌥ ⌘ ← → ↑ ↓ | Fokus panelu kierunkowo |
-| ⌘ ⇧ H | Mignij fokusowanym panelem |
+| Skrót       | Akcja                      |
+| ----------- | -------------------------- |
+| ⌘ D         | Podziel w prawo            |
+| ⌘ ⇧ D       | Podziel w dół              |
+| ⌥ ⌘ ← → ↑ ↓ | Fokus panelu kierunkowo    |
+| ⌘ ⇧ H       | Mignij fokusowanym panelem |
 
 ### Przeglądarka
 
 Skróty narzędzi deweloperskich przeglądarki odpowiadają domyślnym ustawieniom Safari i można je dostosować w `Ustawienia → Skróty klawiszowe`.
 
-| Skrót | Akcja |
-|----------|--------|
-| ⌘ ⇧ L | Otwórz przeglądarkę w podziale |
-| ⌘ L | Fokus na pasku adresu |
-| ⌘ [ | Wstecz |
-| ⌘ ] | Do przodu |
-| ⌘ R | Przeładuj stronę |
+| Skrót | Akcja                                              |
+| ----- | -------------------------------------------------- |
+| ⌘ ⇧ L | Otwórz przeglądarkę w podziale                     |
+| ⌘ L   | Fokus na pasku adresu                              |
+| ⌘ [   | Wstecz                                             |
+| ⌘ ]   | Do przodu                                          |
+| ⌘ R   | Przeładuj stronę                                   |
 | ⌥ ⌘ I | Przełącz Narzędzia Deweloperskie (domyślne Safari) |
-| ⌥ ⌘ C | Pokaż Konsolę JavaScript (domyślne Safari) |
+| ⌥ ⌘ C | Pokaż Konsolę JavaScript (domyślne Safari)         |
 
 ### Powiadomienia
 
-| Skrót | Akcja |
-|----------|--------|
-| ⌘ I | Pokaż panel powiadomień |
+| Skrót | Akcja                                   |
+| ----- | --------------------------------------- |
+| ⌘ I   | Pokaż panel powiadomień                 |
 | ⌘ ⇧ U | Przejdź do najnowszego nieprzeczytanego |
 
 ### Szukaj
 
-| Skrót | Akcja |
-|----------|--------|
-| ⌘ F | Szukaj |
-| ⌘ G / ⌘ ⇧ G | Znajdź następny / poprzedni |
-| ⌘ ⇧ F | Ukryj pasek wyszukiwania |
-| ⌘ E | Użyj zaznaczenia do wyszukiwania |
+| Skrót       | Akcja                            |
+| ----------- | -------------------------------- |
+| ⌘ F         | Szukaj                           |
+| ⌘ G / ⌘ ⇧ G | Znajdź następny / poprzedni      |
+| ⌘ ⇧ F       | Ukryj pasek wyszukiwania         |
+| ⌘ E         | Użyj zaznaczenia do wyszukiwania |
 
 ### Terminal
 
-| Skrót | Akcja |
-|----------|--------|
-| ⌘ K | Wyczyść scrollback |
-| ⌘ C | Kopiuj (z zaznaczeniem) |
-| ⌘ V | Wklej |
+| Skrót     | Akcja                               |
+| --------- | ----------------------------------- |
+| ⌘ K       | Wyczyść scrollback                  |
+| ⌘ C       | Kopiuj (z zaznaczeniem)             |
+| ⌘ V       | Wklej                               |
 | ⌘ + / ⌘ - | Zwiększ / zmniejsz rozmiar czcionki |
-| ⌘ 0 | Resetuj rozmiar czcionki |
+| ⌘ 0       | Resetuj rozmiar czcionki            |
 
 ### Okno
 
-| Skrót | Akcja |
-|----------|--------|
-| ⌘ ⇧ N | Nowe okno |
-| ⌘ , | Ustawienia |
+| Skrót | Akcja                  |
+| ----- | ---------------------- |
+| ⌘ ⇧ N | Nowe okno              |
+| ⌘ ,   | Ustawienia             |
 | ⌘ ⇧ , | Przeładuj konfigurację |
-| ⌘ Q | Zakończ |
+| ⌘ Q   | Zakończ                |
 
 ## Wersje Nightly
 
@@ -239,6 +239,7 @@ cmux NIGHTLY to osobna aplikacja z własnym identyfikatorem pakietu, więc dzia�
 ## Przywracanie sesji (obecne zachowanie)
 
 Przy ponownym uruchomieniu cmux obecnie przywraca tylko układ aplikacji i metadane:
+
 - Układ okien/przestrzeni roboczych/paneli
 - Katalogi robocze
 - Scrollback terminala (najlepsza próba)

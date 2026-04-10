@@ -4,7 +4,11 @@ import { buildAlternates } from "../../../../i18n/seo";
 import { CodeBlock } from "../../components/code-block";
 import { Callout } from "../../components/callout";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "docs.api" });
   return {
@@ -30,8 +34,12 @@ function Cmd({
       <h4>{name}</h4>
       <p>{desc}</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-        <CodeBlock title="CLI" lang="bash">{cli}</CodeBlock>
-        <CodeBlock title="Socket" lang="json">{socket}</CodeBlock>
+        <CodeBlock title="CLI" lang="bash">
+          {cli}
+        </CodeBlock>
+        <CodeBlock title="Socket" lang="json">
+          {socket}
+        </CodeBlock>
       </div>
     </div>
   );
@@ -117,9 +125,7 @@ export default function ApiPage() {
           </tr>
         </tbody>
       </table>
-      <Callout type="warn">
-        {t("accessCallout")}
-      </Callout>
+      <Callout type="warn">{t("accessCallout")}</Callout>
 
       <h2>{t("cliOptions")}</h2>
       <table>
@@ -419,9 +425,7 @@ cmux identify --json`}
           </tr>
         </tbody>
       </table>
-      <Callout>
-        {t("envCallout")}
-      </Callout>
+      <Callout>{t("envCallout")}</Callout>
 
       <h2>{t("detectingCmux")}</h2>
       <CodeBlock title="bash" lang="bash">{`# Prefer explicit socket path if set

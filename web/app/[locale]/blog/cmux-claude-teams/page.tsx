@@ -3,15 +3,29 @@ import { getTranslations } from "next-intl/server";
 import { buildAlternates } from "../../../../i18n/seo";
 import { Link } from "../../../../i18n/navigation";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "blog.cmuxClaudeTeams" });
+  const t = await getTranslations({
+    locale,
+    namespace: "blog.cmuxClaudeTeams",
+  });
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
     keywords: [
-      "cmux", "Claude Code", "agent teams", "teammate mode", "tmux",
-      "terminal", "macOS", "AI coding agents", "split panes",
+      "cmux",
+      "Claude Code",
+      "agent teams",
+      "teammate mode",
+      "tmux",
+      "terminal",
+      "macOS",
+      "AI coding agents",
+      "split panes",
     ],
     openGraph: {
       title: t("metaTitle"),
@@ -82,7 +96,9 @@ export default function CmuxClaudeTeamsPage() {
       </p>
 
       <p className="mt-4">
-        <Link href="/docs/agent-integrations/claude-code-teams">Read the docs &rarr;</Link>
+        <Link href="/docs/agent-integrations/claude-code-teams">
+          Read the docs &rarr;
+        </Link>
       </p>
     </>
   );

@@ -3,7 +3,11 @@ import { getTranslations } from "next-intl/server";
 import { buildAlternates } from "../../../../i18n/seo";
 import { CodeBlock } from "../../components/code-block";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "docs.concepts" });
   return {
@@ -29,9 +33,7 @@ export default function ConceptsPage() {
                     └── Panel (terminal or browser content)`}</CodeBlock>
 
       <h3>{t("windowTitle")}</h3>
-      <p>
-        {t("windowDesc", { shortcut: "⌘⇧N" })}
-      </p>
+      <p>{t("windowDesc", { shortcut: "⌘⇧N" })}</p>
 
       <h3>{t("workspaceTitle")}</h3>
       <p>{t("workspaceDesc")}</p>

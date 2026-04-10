@@ -148,87 +148,87 @@ Weitere Informationen zur Konfiguration von cmux finden Sie in [unserer Dokument
 
 ### Arbeitsbereiche
 
-| Tastenkürzel | Aktion |
-|----------|--------|
-| ⌘ N | Neuer Arbeitsbereich |
-| ⌘ 1–8 | Zu Arbeitsbereich 1–8 springen |
-| ⌘ 9 | Zum letzten Arbeitsbereich springen |
-| ⌃ ⌘ ] | Nächster Arbeitsbereich |
-| ⌃ ⌘ [ | Vorheriger Arbeitsbereich |
-| ⌘ ⇧ W | Arbeitsbereich schließen |
-| ⌘ ⇧ R | Arbeitsbereich umbenennen |
-| ⌘ B | Seitenleiste umschalten |
+| Tastenkürzel | Aktion                              |
+| ------------ | ----------------------------------- |
+| ⌘ N          | Neuer Arbeitsbereich                |
+| ⌘ 1–8        | Zu Arbeitsbereich 1–8 springen      |
+| ⌘ 9          | Zum letzten Arbeitsbereich springen |
+| ⌃ ⌘ ]        | Nächster Arbeitsbereich             |
+| ⌃ ⌘ [        | Vorheriger Arbeitsbereich           |
+| ⌘ ⇧ W        | Arbeitsbereich schließen            |
+| ⌘ ⇧ R        | Arbeitsbereich umbenennen           |
+| ⌘ B          | Seitenleiste umschalten             |
 
 ### Oberflächen
 
-| Tastenkürzel | Aktion |
-|----------|--------|
-| ⌘ T | Neue Oberfläche |
-| ⌘ ⇧ ] | Nächste Oberfläche |
-| ⌘ ⇧ [ | Vorherige Oberfläche |
-| ⌃ Tab | Nächste Oberfläche |
-| ⌃ ⇧ Tab | Vorherige Oberfläche |
-| ⌃ 1–8 | Zu Oberfläche 1–8 springen |
-| ⌃ 9 | Zur letzten Oberfläche springen |
-| ⌘ W | Oberfläche schließen |
+| Tastenkürzel | Aktion                          |
+| ------------ | ------------------------------- |
+| ⌘ T          | Neue Oberfläche                 |
+| ⌘ ⇧ ]        | Nächste Oberfläche              |
+| ⌘ ⇧ [        | Vorherige Oberfläche            |
+| ⌃ Tab        | Nächste Oberfläche              |
+| ⌃ ⇧ Tab      | Vorherige Oberfläche            |
+| ⌃ 1–8        | Zu Oberfläche 1–8 springen      |
+| ⌃ 9          | Zur letzten Oberfläche springen |
+| ⌘ W          | Oberfläche schließen            |
 
 ### Geteilte Bereiche
 
-| Tastenkürzel | Aktion |
-|----------|--------|
-| ⌘ D | Nach rechts teilen |
-| ⌘ ⇧ D | Nach unten teilen |
-| ⌥ ⌘ ← → ↑ ↓ | Bereich richtungsabhängig fokussieren |
-| ⌘ ⇧ H | Fokussierten Bereich aufblitzen |
+| Tastenkürzel | Aktion                                |
+| ------------ | ------------------------------------- |
+| ⌘ D          | Nach rechts teilen                    |
+| ⌘ ⇧ D        | Nach unten teilen                     |
+| ⌥ ⌘ ← → ↑ ↓  | Bereich richtungsabhängig fokussieren |
+| ⌘ ⇧ H        | Fokussierten Bereich aufblitzen       |
 
 ### Browser
 
 Tastenkürzel für Browser-Entwicklertools folgen den Safari-Standardeinstellungen und sind in `Einstellungen → Tastenkürzel` anpassbar.
 
-| Tastenkürzel | Aktion |
-|----------|--------|
-| ⌘ ⇧ L | Browser in Teilung öffnen |
-| ⌘ L | Adressleiste fokussieren |
-| ⌘ [ | Zurück |
-| ⌘ ] | Vorwärts |
-| ⌘ R | Seite neu laden |
-| ⌥ ⌘ I | Entwicklertools umschalten (Safari-Standard) |
-| ⌥ ⌘ C | JavaScript-Konsole anzeigen (Safari-Standard) |
+| Tastenkürzel | Aktion                                        |
+| ------------ | --------------------------------------------- |
+| ⌘ ⇧ L        | Browser in Teilung öffnen                     |
+| ⌘ L          | Adressleiste fokussieren                      |
+| ⌘ [          | Zurück                                        |
+| ⌘ ]          | Vorwärts                                      |
+| ⌘ R          | Seite neu laden                               |
+| ⌥ ⌘ I        | Entwicklertools umschalten (Safari-Standard)  |
+| ⌥ ⌘ C        | JavaScript-Konsole anzeigen (Safari-Standard) |
 
 ### Benachrichtigungen
 
-| Tastenkürzel | Aktion |
-|----------|--------|
-| ⌘ I | Benachrichtigungspanel anzeigen |
-| ⌘ ⇧ U | Zur neuesten ungelesenen springen |
+| Tastenkürzel | Aktion                            |
+| ------------ | --------------------------------- |
+| ⌘ I          | Benachrichtigungspanel anzeigen   |
+| ⌘ ⇧ U        | Zur neuesten ungelesenen springen |
 
 ### Suchen
 
-| Tastenkürzel | Aktion |
-|----------|--------|
-| ⌘ F | Suchen |
-| ⌘ G / ⌘ ⇧ G | Nächstes / vorheriges Ergebnis |
-| ⌘ ⇧ F | Suchleiste ausblenden |
-| ⌘ E | Auswahl für Suche verwenden |
+| Tastenkürzel | Aktion                         |
+| ------------ | ------------------------------ |
+| ⌘ F          | Suchen                         |
+| ⌘ G / ⌘ ⇧ G  | Nächstes / vorheriges Ergebnis |
+| ⌘ ⇧ F        | Suchleiste ausblenden          |
+| ⌘ E          | Auswahl für Suche verwenden    |
 
 ### Terminal
 
-| Tastenkürzel | Aktion |
-|----------|--------|
-| ⌘ K | Scrollback löschen |
-| ⌘ C | Kopieren (mit Auswahl) |
-| ⌘ V | Einfügen |
-| ⌘ + / ⌘ - | Schriftgröße vergrößern / verkleinern |
-| ⌘ 0 | Schriftgröße zurücksetzen |
+| Tastenkürzel | Aktion                                |
+| ------------ | ------------------------------------- |
+| ⌘ K          | Scrollback löschen                    |
+| ⌘ C          | Kopieren (mit Auswahl)                |
+| ⌘ V          | Einfügen                              |
+| ⌘ + / ⌘ -    | Schriftgröße vergrößern / verkleinern |
+| ⌘ 0          | Schriftgröße zurücksetzen             |
 
 ### Fenster
 
-| Tastenkürzel | Aktion |
-|----------|--------|
-| ⌘ ⇧ N | Neues Fenster |
-| ⌘ , | Einstellungen |
-| ⌘ ⇧ , | Konfiguration neu laden |
-| ⌘ Q | Beenden |
+| Tastenkürzel | Aktion                  |
+| ------------ | ----------------------- |
+| ⌘ ⇧ N        | Neues Fenster           |
+| ⌘ ,          | Einstellungen           |
+| ⌘ ⇧ ,        | Konfiguration neu laden |
+| ⌘ Q          | Beenden                 |
 
 ## Nightly Builds
 
@@ -239,6 +239,7 @@ cmux NIGHTLY ist eine separate App mit eigener Bundle-ID, die neben der stabilen
 ## Sitzungswiederherstellung (aktuelles Verhalten)
 
 Beim Neustart stellt cmux derzeit nur App-Layout und Metadaten wieder her:
+
 - Fenster-/Arbeitsbereich-/Bereichs-Layout
 - Arbeitsverzeichnisse
 - Terminal-Scrollback (bestmöglich)

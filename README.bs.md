@@ -148,87 +148,87 @@ Za više informacija o konfiguraciji cmux, posjetite [našu dokumentaciju](https
 
 ### Radni prostori
 
-| Prečica | Akcija |
-|----------|--------|
-| ⌘ N | Novi radni prostor |
-| ⌘ 1–8 | Skoči na radni prostor 1–8 |
-| ⌘ 9 | Skoči na posljednji radni prostor |
-| ⌃ ⌘ ] | Sljedeći radni prostor |
-| ⌃ ⌘ [ | Prethodni radni prostor |
-| ⌘ ⇧ W | Zatvori radni prostor |
-| ⌘ ⇧ R | Preimenuj radni prostor |
-| ⌘ B | Prikaži/sakrij bočnu traku |
+| Prečica | Akcija                            |
+| ------- | --------------------------------- |
+| ⌘ N     | Novi radni prostor                |
+| ⌘ 1–8   | Skoči na radni prostor 1–8        |
+| ⌘ 9     | Skoči na posljednji radni prostor |
+| ⌃ ⌘ ]   | Sljedeći radni prostor            |
+| ⌃ ⌘ [   | Prethodni radni prostor           |
+| ⌘ ⇧ W   | Zatvori radni prostor             |
+| ⌘ ⇧ R   | Preimenuj radni prostor           |
+| ⌘ B     | Prikaži/sakrij bočnu traku        |
 
 ### Površine
 
-| Prečica | Akcija |
-|----------|--------|
-| ⌘ T | Nova površina |
-| ⌘ ⇧ ] | Sljedeća površina |
-| ⌘ ⇧ [ | Prethodna površina |
-| ⌃ Tab | Sljedeća površina |
-| ⌃ ⇧ Tab | Prethodna površina |
-| ⌃ 1–8 | Skoči na površinu 1–8 |
-| ⌃ 9 | Skoči na posljednju površinu |
-| ⌘ W | Zatvori površinu |
+| Prečica | Akcija                       |
+| ------- | ---------------------------- |
+| ⌘ T     | Nova površina                |
+| ⌘ ⇧ ]   | Sljedeća površina            |
+| ⌘ ⇧ [   | Prethodna površina           |
+| ⌃ Tab   | Sljedeća površina            |
+| ⌃ ⇧ Tab | Prethodna površina           |
+| ⌃ 1–8   | Skoči na površinu 1–8        |
+| ⌃ 9     | Skoči na posljednju površinu |
+| ⌘ W     | Zatvori površinu             |
 
 ### Podijeljeni Paneli
 
-| Prečica | Akcija |
-|----------|--------|
-| ⌘ D | Podijeli desno |
-| ⌘ ⇧ D | Podijeli dolje |
-| ⌥ ⌘ ← → ↑ ↓ | Fokusiraj panel po smjeru |
-| ⌘ ⇧ H | Trepni fokusiranim panelom |
+| Prečica     | Akcija                     |
+| ----------- | -------------------------- |
+| ⌘ D         | Podijeli desno             |
+| ⌘ ⇧ D       | Podijeli dolje             |
+| ⌥ ⌘ ← → ↑ ↓ | Fokusiraj panel po smjeru  |
+| ⌘ ⇧ H       | Trepni fokusiranim panelom |
 
 ### Preglednik
 
 Prečice razvojnih alata preglednika prate Safari zadane postavke i mogu se prilagoditi u `Postavke → Prečice na tastaturi`.
 
-| Prečica | Akcija |
-|----------|--------|
-| ⌘ ⇧ L | Otvori preglednik u podjeli |
-| ⌘ L | Fokusiraj adresnu traku |
-| ⌘ [ | Nazad |
-| ⌘ ] | Naprijed |
-| ⌘ R | Ponovo učitaj stranicu |
-| ⌥ ⌘ I | Prikaži/sakrij Alate za Programere (Safari zadano) |
-| ⌥ ⌘ C | Prikaži JavaScript Konzolu (Safari zadano) |
+| Prečica | Akcija                                             |
+| ------- | -------------------------------------------------- |
+| ⌘ ⇧ L   | Otvori preglednik u podjeli                        |
+| ⌘ L     | Fokusiraj adresnu traku                            |
+| ⌘ [     | Nazad                                              |
+| ⌘ ]     | Naprijed                                           |
+| ⌘ R     | Ponovo učitaj stranicu                             |
+| ⌥ ⌘ I   | Prikaži/sakrij Alate za Programere (Safari zadano) |
+| ⌥ ⌘ C   | Prikaži JavaScript Konzolu (Safari zadano)         |
 
 ### Obavještenja
 
-| Prečica | Akcija |
-|----------|--------|
-| ⌘ I | Prikaži panel obavještenja |
-| ⌘ ⇧ U | Skoči na posljednje nepročitano |
+| Prečica | Akcija                          |
+| ------- | ------------------------------- |
+| ⌘ I     | Prikaži panel obavještenja      |
+| ⌘ ⇧ U   | Skoči na posljednje nepročitano |
 
 ### Pretraga
 
-| Prečica | Akcija |
-|----------|--------|
-| ⌘ F | Pretraži |
-| ⌘ G / ⌘ ⇧ G | Nađi sljedeći / prethodni |
-| ⌘ ⇧ F | Sakrij traku pretrage |
-| ⌘ E | Koristi selekciju za pretragu |
+| Prečica     | Akcija                        |
+| ----------- | ----------------------------- |
+| ⌘ F         | Pretraži                      |
+| ⌘ G / ⌘ ⇧ G | Nađi sljedeći / prethodni     |
+| ⌘ ⇧ F       | Sakrij traku pretrage         |
+| ⌘ E         | Koristi selekciju za pretragu |
 
 ### Terminal
 
-| Prečica | Akcija |
-|----------|--------|
-| ⌘ K | Očisti scrollback |
-| ⌘ C | Kopiraj (sa selekcijom) |
-| ⌘ V | Zalijepi |
+| Prečica   | Akcija                          |
+| --------- | ------------------------------- |
+| ⌘ K       | Očisti scrollback               |
+| ⌘ C       | Kopiraj (sa selekcijom)         |
+| ⌘ V       | Zalijepi                        |
 | ⌘ + / ⌘ - | Povećaj / smanji veličinu fonta |
-| ⌘ 0 | Resetuj veličinu fonta |
+| ⌘ 0       | Resetuj veličinu fonta          |
 
 ### Prozor
 
-| Prečica | Akcija |
-|----------|--------|
-| ⌘ ⇧ N | Novi prozor |
-| ⌘ , | Postavke |
-| ⌘ ⇧ , | Ponovo učitaj konfiguraciju |
-| ⌘ Q | Zatvori |
+| Prečica | Akcija                      |
+| ------- | --------------------------- |
+| ⌘ ⇧ N   | Novi prozor                 |
+| ⌘ ,     | Postavke                    |
+| ⌘ ⇧ ,   | Ponovo učitaj konfiguraciju |
+| ⌘ Q     | Zatvori                     |
 
 ## Noćne verzije
 
@@ -239,6 +239,7 @@ cmux NIGHTLY je zasebna aplikacija sa vlastitim bundle ID-om, tako da radi upore
 ## Vraćanje sesije (trenutno ponašanje)
 
 Prilikom ponovnog pokretanja, cmux trenutno vraća samo raspored aplikacije i metapodatke:
+
 - Raspored prozora/radnih prostora/panela
 - Radne direktorije
 - Scrollback terminala (po mogućnosti)

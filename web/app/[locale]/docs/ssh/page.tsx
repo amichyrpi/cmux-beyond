@@ -3,7 +3,11 @@ import { getTranslations } from "next-intl/server";
 import { buildAlternates } from "../../../../i18n/seo";
 import { CodeBlock } from "../../components/code-block";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "docs.ssh" });
   return {
@@ -45,11 +49,36 @@ cmux ssh user@remote -i ~/.ssh/id_ed25519`}</CodeBlock>
           </tr>
         </thead>
         <tbody>
-          <tr><td><code>--name</code></td><td>{t("flagNameVal")}</td></tr>
-          <tr><td><code>-p, --port</code></td><td>{t("flagPort")}</td></tr>
-          <tr><td><code>-i, --identity</code></td><td>{t("flagIdentity")}</td></tr>
-          <tr><td><code>-o, --ssh-option</code></td><td>{t("flagSshOption")}</td></tr>
-          <tr><td><code>--no-focus</code></td><td>{t("flagNoFocus")}</td></tr>
+          <tr>
+            <td>
+              <code>--name</code>
+            </td>
+            <td>{t("flagNameVal")}</td>
+          </tr>
+          <tr>
+            <td>
+              <code>-p, --port</code>
+            </td>
+            <td>{t("flagPort")}</td>
+          </tr>
+          <tr>
+            <td>
+              <code>-i, --identity</code>
+            </td>
+            <td>{t("flagIdentity")}</td>
+          </tr>
+          <tr>
+            <td>
+              <code>-o, --ssh-option</code>
+            </td>
+            <td>{t("flagSshOption")}</td>
+          </tr>
+          <tr>
+            <td>
+              <code>--no-focus</code>
+            </td>
+            <td>{t("flagNoFocus")}</td>
+          </tr>
         </tbody>
       </table>
 
@@ -81,9 +110,18 @@ cmux omo`}</CodeBlock>
           </tr>
         </thead>
         <tbody>
-          <tr><td>{t("daemonProxy")}</td><td>{t("daemonProxyHow")}</td></tr>
-          <tr><td>{t("daemonRelay")}</td><td>{t("daemonRelayHow")}</td></tr>
-          <tr><td>{t("daemonSession")}</td><td>{t("daemonSessionHow")}</td></tr>
+          <tr>
+            <td>{t("daemonProxy")}</td>
+            <td>{t("daemonProxyHow")}</td>
+          </tr>
+          <tr>
+            <td>{t("daemonRelay")}</td>
+            <td>{t("daemonRelayHow")}</td>
+          </tr>
+          <tr>
+            <td>{t("daemonSession")}</td>
+            <td>{t("daemonSessionHow")}</td>
+          </tr>
         </tbody>
       </table>
       <p>{t("daemonPath")}</p>

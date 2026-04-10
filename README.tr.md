@@ -148,87 +148,87 @@ cmux'u nasıl yapılandıracağınız hakkında daha fazla bilgi için, [doküma
 
 ### Çalışma Alanları
 
-| Kısayol | Eylem |
-|----------|--------|
-| ⌘ N | Yeni çalışma alanı |
-| ⌘ 1–8 | Çalışma alanı 1–8'e atla |
-| ⌘ 9 | Son çalışma alanına atla |
-| ⌃ ⌘ ] | Sonraki çalışma alanı |
-| ⌃ ⌘ [ | Önceki çalışma alanı |
-| ⌘ ⇧ W | Çalışma alanını kapat |
-| ⌘ ⇧ R | Çalışma alanını yeniden adlandır |
-| ⌘ B | Kenar çubuğunu aç/kapat |
+| Kısayol | Eylem                            |
+| ------- | -------------------------------- |
+| ⌘ N     | Yeni çalışma alanı               |
+| ⌘ 1–8   | Çalışma alanı 1–8'e atla         |
+| ⌘ 9     | Son çalışma alanına atla         |
+| ⌃ ⌘ ]   | Sonraki çalışma alanı            |
+| ⌃ ⌘ [   | Önceki çalışma alanı             |
+| ⌘ ⇧ W   | Çalışma alanını kapat            |
+| ⌘ ⇧ R   | Çalışma alanını yeniden adlandır |
+| ⌘ B     | Kenar çubuğunu aç/kapat          |
 
 ### Surfaces
 
-| Kısayol | Eylem |
-|----------|--------|
-| ⌘ T | Yeni surface |
-| ⌘ ⇧ ] | Sonraki surface |
-| ⌘ ⇧ [ | Önceki surface |
-| ⌃ Tab | Sonraki surface |
-| ⌃ ⇧ Tab | Önceki surface |
-| ⌃ 1–8 | Surface 1–8'e atla |
-| ⌃ 9 | Son surface'e atla |
-| ⌘ W | Surface'i kapat |
+| Kısayol | Eylem              |
+| ------- | ------------------ |
+| ⌘ T     | Yeni surface       |
+| ⌘ ⇧ ]   | Sonraki surface    |
+| ⌘ ⇧ [   | Önceki surface     |
+| ⌃ Tab   | Sonraki surface    |
+| ⌃ ⇧ Tab | Önceki surface     |
+| ⌃ 1–8   | Surface 1–8'e atla |
+| ⌃ 9     | Son surface'e atla |
+| ⌘ W     | Surface'i kapat    |
 
 ### Bölünmüş Paneller
 
-| Kısayol | Eylem |
-|----------|--------|
-| ⌘ D | Sağa böl |
-| ⌘ ⇧ D | Aşağı böl |
-| ⌥ ⌘ ← → ↑ ↓ | Yönlü panel odaklama |
-| ⌘ ⇧ H | Odaklanan paneli yanıp söndür |
+| Kısayol     | Eylem                         |
+| ----------- | ----------------------------- |
+| ⌘ D         | Sağa böl                      |
+| ⌘ ⇧ D       | Aşağı böl                     |
+| ⌥ ⌘ ← → ↑ ↓ | Yönlü panel odaklama          |
+| ⌘ ⇧ H       | Odaklanan paneli yanıp söndür |
 
 ### Tarayıcı
 
 Tarayıcı geliştirici araçları kısayolları Safari varsayılanlarını takip eder ve `Settings → Keyboard Shortcuts` bölümünden özelleştirilebilir.
 
-| Kısayol | Eylem |
-|----------|--------|
-| ⌘ ⇧ L | Bölmede tarayıcı aç |
-| ⌘ L | Adres çubuğuna odaklan |
-| ⌘ [ | Geri |
-| ⌘ ] | İleri |
-| ⌘ R | Sayfayı yeniden yükle |
-| ⌥ ⌘ I | Geliştirici Araçlarını aç/kapat (Safari varsayılanı) |
-| ⌥ ⌘ C | JavaScript Konsolunu göster (Safari varsayılanı) |
+| Kısayol | Eylem                                                |
+| ------- | ---------------------------------------------------- |
+| ⌘ ⇧ L   | Bölmede tarayıcı aç                                  |
+| ⌘ L     | Adres çubuğuna odaklan                               |
+| ⌘ [     | Geri                                                 |
+| ⌘ ]     | İleri                                                |
+| ⌘ R     | Sayfayı yeniden yükle                                |
+| ⌥ ⌘ I   | Geliştirici Araçlarını aç/kapat (Safari varsayılanı) |
+| ⌥ ⌘ C   | JavaScript Konsolunu göster (Safari varsayılanı)     |
 
 ### Bildirimler
 
-| Kısayol | Eylem |
-|----------|--------|
-| ⌘ I | Bildirim panelini göster |
-| ⌘ ⇧ U | En son okunmamışa atla |
+| Kısayol | Eylem                    |
+| ------- | ------------------------ |
+| ⌘ I     | Bildirim panelini göster |
+| ⌘ ⇧ U   | En son okunmamışa atla   |
 
 ### Bul
 
-| Kısayol | Eylem |
-|----------|--------|
-| ⌘ F | Bul |
+| Kısayol     | Eylem                        |
+| ----------- | ---------------------------- |
+| ⌘ F         | Bul                          |
 | ⌘ G / ⌘ ⇧ G | Sonrakini bul / Öncekini bul |
-| ⌘ ⇧ F | Arama çubuğunu gizle |
-| ⌘ E | Seçimi arama için kullan |
+| ⌘ ⇧ F       | Arama çubuğunu gizle         |
+| ⌘ E         | Seçimi arama için kullan     |
 
 ### Terminal
 
-| Kısayol | Eylem |
-|----------|--------|
-| ⌘ K | Kaydırma geçmişini temizle |
-| ⌘ C | Kopyala (seçimle) |
-| ⌘ V | Yapıştır |
+| Kısayol   | Eylem                            |
+| --------- | -------------------------------- |
+| ⌘ K       | Kaydırma geçmişini temizle       |
+| ⌘ C       | Kopyala (seçimle)                |
+| ⌘ V       | Yapıştır                         |
 | ⌘ + / ⌘ - | Yazı tipi boyutunu artır / azalt |
-| ⌘ 0 | Yazı tipi boyutunu sıfırla |
+| ⌘ 0       | Yazı tipi boyutunu sıfırla       |
 
 ### Pencere
 
-| Kısayol | Eylem |
-|----------|--------|
-| ⌘ ⇧ N | Yeni pencere |
-| ⌘ , | Ayarlar |
-| ⌘ ⇧ , | Yapılandırmayı yeniden yükle |
-| ⌘ Q | Çıkış |
+| Kısayol | Eylem                        |
+| ------- | ---------------------------- |
+| ⌘ ⇧ N   | Yeni pencere                 |
+| ⌘ ,     | Ayarlar                      |
+| ⌘ ⇧ ,   | Yapılandırmayı yeniden yükle |
+| ⌘ Q     | Çıkış                        |
 
 ## Nightly Sürümler
 
@@ -239,6 +239,7 @@ cmux NIGHTLY, kendi bundle ID'sine sahip ayrı bir uygulamadır, bu yüzden kara
 ## Oturum geri yükleme (mevcut davranış)
 
 Yeniden başlatıldığında, cmux şu anda yalnızca uygulama düzenini ve meta verileri geri yükler:
+
 - Pencere/çalışma alanı/panel düzeni
 - Çalışma dizinleri
 - Terminal kaydırma geçmişi (en iyi çaba)

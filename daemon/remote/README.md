@@ -27,12 +27,14 @@ When invoked as `cmux` (via wrapper/symlink installed during bootstrap), the bin
 13. `session.status`
 
 Current integration in cmux:
+
 1. `workspace.remote.configure` now bootstraps this binary over SSH when missing.
 2. Client sends `hello` before enabling remote proxy transport.
 3. Local workspace proxy broker serves SOCKS5 + HTTP CONNECT and tunnels stream traffic through `proxy.*` RPC over `serve --stdio`, using daemon-pushed stream events instead of polling reads.
 4. Daemon status/capabilities are exposed in `workspace.remote.status -> remote.daemon` (including `session.resize.min`).
 
 `workspace.remote.configure` contract notes:
+
 1. `port` / `local_proxy_port` accept integer values and numeric strings; explicit `null` clears each field.
 2. Out-of-range values and invalid types return `invalid_params`.
 3. `local_proxy_port` is an internal deterministic test hook used by bind-conflict regressions.
@@ -41,12 +43,14 @@ Current integration in cmux:
 ## Distribution
 
 Release and nightly builds publish prebuilt `cmuxd-remote` binaries on GitHub Releases for:
+
 1. `darwin/arm64`
 2. `darwin/amd64`
 3. `linux/arm64`
 4. `linux/amd64`
 
 The app embeds a compact manifest in `Info.plist` with:
+
 1. exact release asset URLs
 2. pinned SHA-256 digests
 3. release tag and checksums asset URL
@@ -54,6 +58,7 @@ The app embeds a compact manifest in `Info.plist` with:
 Release and nightly apps download and cache the matching binary locally, verify its SHA-256, then upload it to the remote host if needed. Dev builds can opt into a local `go build` fallback with `CMUX_REMOTE_DAEMON_ALLOW_LOCAL_BUILD=1`.
 
 To inspect what a given app build trusts, run:
+
 1. `cmux remote-daemon-status`
 2. `cmux remote-daemon-status --os linux --arch amd64`
 
@@ -64,6 +69,7 @@ The command prints the exact release asset URL, expected SHA-256, local cache st
 The `cli` subcommand (or `cmux` wrapper/symlink) connects to the local cmux app through an SSH reverse forward and relays commands. It supports both v1 text protocol and v2 JSON-RPC commands.
 
 Socket discovery order:
+
 1. `--socket <path>` flag
 2. `CMUX_SOCKET_PATH` environment variable
 3. `~/.cmux/socket_addr` file (written by the app after the reverse relay establishes)
@@ -71,6 +77,7 @@ Socket discovery order:
 For TCP addresses, the CLI dials once and only refreshes `~/.cmux/socket_addr` a single time if the first address was stale. Relay metadata is published only after the reverse forward is ready, so steady-state use does not rely on polling.
 
 Authenticated relay details:
+
 1. Each SSH workspace gets its own relay ID and relay token.
 2. The app runs a local loopback relay server that requires an HMAC-SHA256 challenge-response before forwarding a command to the real local Unix socket.
 3. The remote shell never gets direct access to the local app socket. It only gets the reverse-forwarded relay port plus `~/.cmux/relay/<port>.auth`, which is written with `0600` permissions and removed when the relay stops.

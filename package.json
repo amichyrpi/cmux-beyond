@@ -1,4 +1,10 @@
 {
+  "scripts": {
+    "format": "prettier --write \"**/*.{ts,tsx,md,mdx}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.7.4"
+  },
   "dependencies": {
     "vercel": "^50.9.5"
   },

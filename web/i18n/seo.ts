@@ -10,8 +10,7 @@ const BASE = "https://cmux.com";
 export function buildAlternates(locale: string, path: string) {
   const languages: Record<string, string> = {};
   for (const loc of locales) {
-    languages[loc] =
-      loc === "en" ? `${BASE}${path}` : `${BASE}/${loc}${path}`;
+    languages[loc] = loc === "en" ? `${BASE}${path}` : `${BASE}/${loc}${path}`;
   }
   languages["x-default"] = `${BASE}${path}`;
 

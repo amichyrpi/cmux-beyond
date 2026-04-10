@@ -73,7 +73,7 @@ export function GitHubStarsBadge({
 } = {}) {
   const [stars, setStars] = useState<number | null>(() => cachedStars);
   const [shouldAnimate] = useState(
-    () => location === "stars_badge" && !hasAnimatedPrimaryStarsBadge
+    () => location === "stars_badge" && !hasAnimatedPrimaryStarsBadge,
   );
   const classes = `inline-flex items-center gap-1.5 pr-1 text-sm text-muted hover:text-foreground transition-colors ${shouldAnimate ? "animate-fade-in" : ""} ${className ?? ""}`;
 
@@ -104,9 +104,7 @@ export function GitHubStarsBadge({
       href="https://github.com/manaflow-ai/cmux"
       target="_blank"
       rel="noopener noreferrer"
-      onClick={() =>
-        posthog.capture("cmuxterm_github_clicked", { location })
-      }
+      onClick={() => posthog.capture("cmuxterm_github_clicked", { location })}
       className={classes}
     >
       {GITHUB_ICON}

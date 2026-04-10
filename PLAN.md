@@ -7,6 +7,7 @@
 ## Context
 
 cmux is a macOS-only terminal emulator written in Swift / Objective-C, deeply integrated with:
+
 - **Ghostty** (Zig submodule) for terminal rendering, embedded as `GhosttyKit.xcframework` and drawn into a `CAMetalLayer` hosted by an `NSView`.
 - **Bonsplit** (Swift package submodule) for tabbed split-pane management.
 - **AppKit** for window chrome, focus chain, drag/drop, pasteboard, dock tile plugin, AppleScript.
@@ -40,9 +41,11 @@ The goal: a cross-platform **Rust + Tauri v2** rewrite. This is a reimplementati
 ## Progress checklist
 
 ### Phase 0 — Plan file
+
 - [x] Write this `PLAN.md`
 
 ### Phase 1 — Cargo workspace + Tauri skeleton
+
 - [x] [cmux-rs/Cargo.toml](cmux-rs/Cargo.toml) workspace
 - [x] [cmux-rs/crates/cmux-core/](cmux-rs/crates/cmux-core/) with `config`, `socket`, `workspace`, `tab`, `pane`, `terminal`, `bonsplit` modules
 - [x] [cmux-rs/crates/cmux-app/](cmux-rs/crates/cmux-app/) Tauri v2 binary
@@ -51,9 +54,11 @@ The goal: a cross-platform **Rust + Tauri v2** rewrite. This is a reimplementati
 - [ ] `cargo build --workspace` and `pnpm tauri dev` produce an empty window _(requires local `cargo build` + `pnpm install` — see cmux-rs/README.md for the one-time bootstrap)_
 
 ### Phase 2 — Sibling `.rs` stubs for every Swift file
+
 Each file below gets a sibling `.rs` file in the same directory with a `// TODO(rewrite)` marker and a `pub fn __link()` no-op so the Rust module tree can reference it without linker errors. Tick a box when the stub exists.
 
 **[Sources/](Sources/) root (37 files):**
+
 - [x] [Sources/AppDelegate.rs](Sources/AppDelegate.rs)
 - [x] [Sources/AppIconDockTilePlugin.rs](Sources/AppIconDockTilePlugin.rs)
 - [x] [Sources/AppleScriptSupport.rs](Sources/AppleScriptSupport.rs)
@@ -93,6 +98,7 @@ Each file below gets a sibling `.rs` file in the same directory with a `// TODO(
 - [x] [Sources/cmuxApp.rs](Sources/cmuxApp.rs)
 
 **[Sources/Panels/](Sources/Panels/) (11 files):**
+
 - [x] [Sources/Panels/BrowserPanel.rs](Sources/Panels/BrowserPanel.rs)
 - [x] [Sources/Panels/BrowserPanelView.rs](Sources/Panels/BrowserPanelView.rs)
 - [x] [Sources/Panels/BrowserPopupWindowController.rs](Sources/Panels/BrowserPopupWindowController.rs)
@@ -106,11 +112,13 @@ Each file below gets a sibling `.rs` file in the same directory with a `// TODO(
 - [x] [Sources/Panels/TerminalPanelView.rs](Sources/Panels/TerminalPanelView.rs)
 
 **[Sources/Find/](Sources/Find/) (3 files):**
+
 - [x] [Sources/Find/BrowserFindJavaScript.rs](Sources/Find/BrowserFindJavaScript.rs)
 - [x] [Sources/Find/BrowserSearchOverlay.rs](Sources/Find/BrowserSearchOverlay.rs)
 - [x] [Sources/Find/SurfaceSearchOverlay.rs](Sources/Find/SurfaceSearchOverlay.rs)
 
 **[Sources/Update/](Sources/Update/) (12 files):**
+
 - [x] [Sources/Update/UpdateBadge.rs](Sources/Update/UpdateBadge.rs)
 - [x] [Sources/Update/UpdateController.rs](Sources/Update/UpdateController.rs)
 - [x] [Sources/Update/UpdateDelegate.rs](Sources/Update/UpdateDelegate.rs)
@@ -125,9 +133,11 @@ Each file below gets a sibling `.rs` file in the same directory with a `// TODO(
 - [x] [Sources/Update/UpdateViewModel.rs](Sources/Update/UpdateViewModel.rs)
 
 **Bonsplit model (single Rust file, not siblings):**
+
 - [x] [cmux-rs/crates/cmux-core/src/bonsplit.rs](cmux-rs/crates/cmux-core/src/bonsplit.rs) _(stub — real port lands in Phase 4)_
 
 ### Phase 3 — Core: config + IPC (headless Rust binary)
+
 - [ ] Port config parsing (`CmuxConfig`, `GhosttyConfig`, `KeyboardShortcutSettings*`)
 - [ ] Port `SocketControlSettings` auth modes (`off`, `cmuxOnly`, `automation`, `password`, `allowAll`)
 - [ ] Unix-socket / named-pipe listener in `cmux-core::socket` with full command surface:
@@ -137,12 +147,14 @@ Each file below gets a sibling `.rs` file in the same directory with a `// TODO(
 - [ ] `tests_v2/` Python suite passes against the Rust binary with `CMUX_SOCKET=...`
 
 ### Phase 4 — Workspace + tab/pane model (no rendering)
+
 - [ ] Port `Workspace`, `WorkspaceContentView`, `TabManager`, `SessionPersistence` as pure data models
 - [ ] Port Bonsplit model (`SplitNode`, `PaneState`, `TabItem`, `LayoutSnapshot`, `NavigationDirection`) to `cmux-core::bonsplit`
 - [ ] Property tests for split / merge / move-tab
 - [ ] `cargo test -p cmux-core` green
 
 ### Phase 5 — Tauri shell + frontend split/tab UI
+
 - [ ] Bring up Tauri window with React frontend
 - [ ] Implement `ui/src/bonsplit/` — resizable split panes, tab bar, drag-to-reorder, drag-to-split
 - [ ] Tauri commands wire frontend events to `cmux-core` workspace mutations
@@ -150,6 +162,7 @@ Each file below gets a sibling `.rs` file in the same directory with a `// TODO(
 - [ ] Deliverable: empty panes can be created, split, closed, reordered
 
 ### Phase 6 — Terminal core
+
 - [ ] `cmux-core::terminal` — PTY spawn, `alacritty_terminal::Term`, scrollback, search
 - [ ] Port `GhosttyTerminalView`, `TerminalView`, `TerminalSurface` equivalent
 - [ ] Port `TerminalSSHSessionDetector` (regex-based)
@@ -158,22 +171,26 @@ Each file below gets a sibling `.rs` file in the same directory with a `// TODO(
 - [ ] Surface search overlay
 
 ### Phase 7 — Browser panel
+
 - [ ] Port `BrowserPanel`, `BrowserPanelView`, `CmuxWebView` to use Tauri `WebviewWindow`
 - [ ] Port `BrowserPopupWindowController`
 - [ ] Share Bonsplit layout between terminal and browser panes
 - [ ] Port `BrowserSearchOverlay` + `BrowserFindJavaScript`
 
 ### Phase 8 — Notifications, ports, sidebar
+
 - [ ] Port `TerminalNotificationStore`, `NotificationsPage` → `tauri-plugin-notification`
 - [ ] Port `PortScanner` — per-platform (`procfs` on Linux, `netstat2` / `libproc` on macOS, Windows IPHelper)
 - [ ] Sidebar metadata rendering moves entirely to frontend
 
 ### Phase 9 — Auto-update + telemetry
+
 - [ ] Port the `Update*` modules → `tauri-plugin-updater`
 - [ ] `PostHogAnalytics.rs` → `posthog-rs`
 - [ ] `SentryHelper.rs` → `sentry` crate
 
 ### Phase 10 — macOS-only parity (cfg-gated)
+
 - [ ] `AppleScriptSupport.rs` via `objc2`
 - [ ] `AppIconDockTilePlugin.rs`
 - [ ] `WindowDragHandleView.rs`, `WindowDecorationsController.rs`, `WindowToolbarController.rs` — Tauri window APIs + `objc2` vibrancy
@@ -181,6 +198,7 @@ Each file below gets a sibling `.rs` file in the same directory with a `// TODO(
 - [ ] `RemoteRelayZshBootstrap.rs`
 
 ### Phase 11 — Test parity + cutover
+
 - [ ] `tests_v2/` Python suite green against Rust binary
 - [ ] New Rust integration tests under `cmux-rs/crates/cmux-core/tests/`
 - [ ] Manual smoke checklist signed off: launch, split, tab reorder, browser panel, find, update prompt, socket commands
@@ -197,6 +215,7 @@ Each file below gets a sibling `.rs` file in the same directory with a `// TODO(
 ## Verification per phase
 
 Each phase ships when:
+
 - `cargo build --workspace` is green on macOS, Linux, Windows
 - `cargo test --workspace` is green
 - `pnpm --filter ui build` is green
@@ -204,6 +223,7 @@ Each phase ships when:
 - Swift `cmux` target still builds via `./scripts/reload.sh --tag rust-rewrite-noop`
 
 End-to-end check at the end of Phase 11:
+
 1. `cd cmux-rs && cargo tauri build`
 2. Launch produced app, create workspace, split panes, open a tab, run a shell command
 3. Run `tests_v2/` Python suite with `CMUX_SOCKET=` pointing at the Rust binary

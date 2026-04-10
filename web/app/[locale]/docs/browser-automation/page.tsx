@@ -3,9 +3,16 @@ import { getTranslations } from "next-intl/server";
 import { buildAlternates } from "../../../../i18n/seo";
 import { CodeBlock } from "../../components/code-block";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "docs.browserAutomation" });
+  const t = await getTranslations({
+    locale,
+    namespace: "docs.browserAutomation",
+  });
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
@@ -50,9 +57,9 @@ export default function BrowserAutomationPage() {
             <td>
               <code>click</code>, <code>dblclick</code>, <code>hover</code>,{" "}
               <code>focus</code>, <code>check</code>, <code>uncheck</code>,{" "}
-              <code>scroll-into-view</code>, <code>type</code>, <code>fill</code>,{" "}
-              <code>press</code>, <code>keydown</code>, <code>keyup</code>,{" "}
-              <code>select</code>, <code>scroll</code>
+              <code>scroll-into-view</code>, <code>type</code>,{" "}
+              <code>fill</code>, <code>press</code>, <code>keydown</code>,{" "}
+              <code>keyup</code>, <code>select</code>, <code>scroll</code>
             </td>
           </tr>
           <tr>
@@ -65,8 +72,8 @@ export default function BrowserAutomationPage() {
           <tr>
             <td>{t("jsAndInjection")}</td>
             <td>
-              <code>eval</code>, <code>addinitscript</code>, <code>addscript</code>,{" "}
-              <code>addstyle</code>
+              <code>eval</code>, <code>addinitscript</code>,{" "}
+              <code>addscript</code>, <code>addstyle</code>
             </td>
           </tr>
           <tr>

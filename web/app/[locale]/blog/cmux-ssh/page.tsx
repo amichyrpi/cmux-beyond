@@ -3,16 +3,28 @@ import { getTranslations } from "next-intl/server";
 import { buildAlternates } from "../../../../i18n/seo";
 import { Link } from "../../../../i18n/navigation";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "blog.cmuxSsh" });
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
     keywords: [
-      "cmux", "SSH", "remote development", "terminal", "macOS",
-      "port forwarding", "notifications", "AI coding agents",
-      "Claude Code", "remote workspace", "developer tools",
+      "cmux",
+      "SSH",
+      "remote development",
+      "terminal",
+      "macOS",
+      "port forwarding",
+      "notifications",
+      "AI coding agents",
+      "Claude Code",
+      "remote workspace",
+      "developer tools",
     ],
     openGraph: {
       title: t("metaTitle"),
@@ -67,10 +79,20 @@ export default function CmuxSshPage() {
       />
 
       <ul className="mt-4 space-y-1">
-        <li>Browser panes route through the remote machine, so <code>localhost:3000</code> reaches the remote dev server without port forwarding</li>
+        <li>
+          Browser panes route through the remote machine, so{" "}
+          <code>localhost:3000</code> reaches the remote dev server without port
+          forwarding
+        </li>
         <li>Drag an image into a remote terminal to upload via scp</li>
-        <li>Coding agents on the remote box send notifications to your local sidebar</li>
-        <li><code>cmux claude-teams</code> and <code>cmux omo</code> work over SSH, spawning teammate panes locally while computation runs remote</li>
+        <li>
+          Coding agents on the remote box send notifications to your local
+          sidebar
+        </li>
+        <li>
+          <code>cmux claude-teams</code> and <code>cmux omo</code> work over
+          SSH, spawning teammate panes locally while computation runs remote
+        </li>
         <li>The sidebar shows connection state and detected listening ports</li>
       </ul>
 

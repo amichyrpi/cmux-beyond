@@ -13,8 +13,7 @@ export default function TermsOfServicePage() {
       <p>Last revised on: March 18, 2026</p>
 
       <p>
-        The website located at{" "}
-        <a href="https://cmux.com">cmux.com</a> (the
+        The website located at <a href="https://cmux.com">cmux.com</a> (the
         &ldquo;Site&rdquo;) and the cmux desktop application (the
         &ldquo;Application&rdquo;) are copyrighted works belonging to Manaflow
         (&ldquo;Company&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;, and
@@ -40,7 +39,9 @@ export default function TermsOfServicePage() {
       </p>
 
       <h3>Restrictions</h3>
-      <p>The rights granted to you are subject to the following restrictions:</p>
+      <p>
+        The rights granted to you are subject to the following restrictions:
+      </p>
       <ul>
         <li>
           You shall not license, sell, rent, lease, transfer, assign,
@@ -68,8 +69,8 @@ export default function TermsOfServicePage() {
       <p>
         You acknowledge that all intellectual property rights, including
         copyrights, patents, trademarks, and trade secrets, in the Application
-        and its content are owned by Company or Company&rsquo;s suppliers.
-        These Terms do not transfer to you any rights, title or interest in such
+        and its content are owned by Company or Company&rsquo;s suppliers. These
+        Terms do not transfer to you any rights, title or interest in such
         intellectual property, except for the limited license above. Company and
         its suppliers reserve all rights not granted in these Terms.
       </p>
@@ -161,8 +162,8 @@ export default function TermsOfServicePage() {
       <p>
         You have the right to opt out of this arbitration agreement by sending
         written notice to{" "}
-        <a href="mailto:founders@manaflow.com">founders@manaflow.com</a> within 30
-        days of first becoming subject to it.
+        <a href="mailto:founders@manaflow.com">founders@manaflow.com</a> within
+        30 days of first becoming subject to it.
       </p>
 
       <h2>9. General</h2>
@@ -181,7 +182,8 @@ export default function TermsOfServicePage() {
       </p>
 
       <p>
-        Copyright &copy; {new Date().getFullYear()} Manaflow. All rights reserved.
+        Copyright &copy; {new Date().getFullYear()} Manaflow. All rights
+        reserved.
       </p>
     </>
   );

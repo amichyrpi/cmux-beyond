@@ -29,12 +29,14 @@ By default, `reload.sh` builds but does **not** launch the app. The script print
 3. Format it as a markdown link using the template for your agent type.
 
 Example. If `reload.sh` output contains:
+
 ```
 App path:
   /Users/someone/Library/Developer/Xcode/DerivedData/cmux-my-tag/Build/Products/Debug/cmux DEV my-tag.app
 ```
 
 **Claude Code** outputs:
+
 ```markdown
 =======================================================
 [cmux DEV my-tag.app](file:///Users/someone/Library/Developer/Xcode/DerivedData/cmux-my-tag/Build/Products/Debug/cmux%20DEV%20my-tag.app)
@@ -42,6 +44,7 @@ App path:
 ```
 
 **Codex** outputs:
+
 ```
 =======================================================
 [my-tag: file:///Users/someone/Library/Developer/Xcode/DerivedData/cmux-my-tag/Build/Products/Debug/cmux%20DEV%20my-tag.app](file:///Users/someone/Library/Developer/Xcode/DerivedData/cmux-my-tag/Build/Products/Debug/cmux%20DEV%20my-tag.app)
@@ -231,6 +234,7 @@ git commit -m "Update ghostty submodule"
 ## Release
 
 Use the `/release` command to prepare a new release. This will:
+
 1. Determine the new version (bumps minor by default)
 2. Gather commits since the last tag and update the changelog
 3. Update `CHANGELOG.md` (the docs changelog page at `web/app/docs/changelog/page.tsx` reads from it)
@@ -266,6 +270,7 @@ gh run watch --repo manaflow-ai/cmux
 ```
 
 Notes:
+
 - Requires GitHub secrets: `APPLE_CERTIFICATE_BASE64`, `APPLE_CERTIFICATE_PASSWORD`,
   `APPLE_SIGNING_IDENTITY`, `APPLE_ID`, `APPLE_APP_SPECIFIC_PASSWORD`, `APPLE_TEAM_ID`.
 - The release asset is `cmux-macos.dmg` attached to the tag.

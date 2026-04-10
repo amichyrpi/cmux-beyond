@@ -11,9 +11,10 @@ export function LanguageSwitcher() {
 
   function onChange(e: React.ChangeEvent<HTMLSelectElement>) {
     const newLocale = e.target.value as Locale;
-    const qs = typeof window !== "undefined"
-      ? window.location.search + window.location.hash
-      : "";
+    const qs =
+      typeof window !== "undefined"
+        ? window.location.search + window.location.hash
+        : "";
     router.replace(pathname + qs, { locale: newLocale });
   }
 

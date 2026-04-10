@@ -16,23 +16,22 @@ export default function PrivacyPolicyPage() {
       <p>
         Manaflow (the &ldquo;Company&rdquo;) is committed to maintaining robust
         privacy protections for its users. This Privacy Policy is designed to
-        help you understand how we collect, use and safeguard the information you
-        provide to us.
+        help you understand how we collect, use and safeguard the information
+        you provide to us.
       </p>
       <p>
         For purposes of this policy, &ldquo;Site&rdquo; refers to the
-        Company&rsquo;s website at{" "}
-        <a href="https://cmux.com">cmux.com</a>.
+        Company&rsquo;s website at <a href="https://cmux.com">cmux.com</a>.
         &ldquo;Application&rdquo; refers to the cmux desktop application for
         macOS. &ldquo;Service&rdquo; refers to the Site and Application
         collectively. The terms &ldquo;we,&rdquo; &ldquo;us,&rdquo; and
-        &ldquo;our&rdquo; refer to the Company. &ldquo;You&rdquo; refers to
-        you, as a user of our Service.
+        &ldquo;our&rdquo; refer to the Company. &ldquo;You&rdquo; refers to you,
+        as a user of our Service.
       </p>
       <p>
         By using our Service, you accept this Privacy Policy and our{" "}
-        <Link href="/terms-of-service">Terms of Service</Link>, and you consent to
-        our collection, storage, use and disclosure of your information as
+        <Link href="/terms-of-service">Terms of Service</Link>, and you consent
+        to our collection, storage, use and disclosure of your information as
         described here.
       </p>
 
@@ -81,9 +80,7 @@ export default function PrivacyPolicyPage() {
       </p>
 
       <h2>II. Third-Party Services</h2>
-      <p>
-        The Application integrates with the following third-party services:
-      </p>
+      <p>The Application integrates with the following third-party services:</p>
       <ul>
         <li>
           <strong>Sentry</strong> &mdash; error tracking and crash reporting.
@@ -101,7 +98,8 @@ export default function PrivacyPolicyPage() {
         <li>
           <strong>PostHog</strong> &mdash; website analytics. Collects anonymous
           page view data, navigation patterns, and browser metadata via a
-          first-party proxy. No personally identifiable information is collected.
+          first-party proxy. No personally identifiable information is
+          collected.
         </li>
         <li>
           <strong>Resend</strong> &mdash; transactional email delivery. Used to
@@ -165,8 +163,7 @@ export default function PrivacyPolicyPage() {
       <h2>VIII. Contact Us</h2>
       <p>
         If you have any questions regarding this Privacy Policy, please contact
-        us at{" "}
-        <a href="mailto:founders@manaflow.com">founders@manaflow.com</a>.
+        us at <a href="mailto:founders@manaflow.com">founders@manaflow.com</a>.
       </p>
 
       <h2>IX. Data Retention</h2>

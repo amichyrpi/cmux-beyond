@@ -14,10 +14,7 @@ export function NavLinks() {
       >
         {t("docs")}
       </Link>
-      <Link
-        href="/blog"
-        className="hover:text-foreground transition-colors"
-      >
+      <Link href="/blog" className="hover:text-foreground transition-colors">
         {t("blog")}
       </Link>
       <Link
@@ -36,7 +33,9 @@ export function NavLinks() {
         href="https://github.com/manaflow-ai/cmux"
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() => posthog.capture("cmuxterm_github_clicked", { location: "navbar" })}
+        onClick={() =>
+          posthog.capture("cmuxterm_github_clicked", { location: "navbar" })
+        }
         className="hover:text-foreground transition-colors"
       >
         {t("github")}

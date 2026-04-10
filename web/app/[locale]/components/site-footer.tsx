@@ -81,9 +81,7 @@ export async function SiteFooter() {
           ))}
         </div>
         <div className="flex items-center justify-between mt-10">
-          <p className="text-xs text-muted">
-            {t("copyright", { year })}
-          </p>
+          <p className="text-xs text-muted">{t("copyright", { year })}</p>
           <LanguageSwitcher />
         </div>
       </div>

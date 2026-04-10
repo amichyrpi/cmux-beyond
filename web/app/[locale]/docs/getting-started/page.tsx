@@ -5,7 +5,11 @@ import { CodeBlock } from "../../components/code-block";
 import { Callout } from "../../components/callout";
 import { DownloadButton } from "../../components/download-button";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "docs.gettingStarted" });
   return {

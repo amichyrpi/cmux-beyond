@@ -44,10 +44,7 @@ export default function NightlyPage() {
         </div>
 
         {/* Description */}
-        <p
-          className="text-[15px] text-muted mb-8"
-          style={{ lineHeight: 1.5 }}
-        >
+        <p className="text-[15px] text-muted mb-8" style={{ lineHeight: 1.5 }}>
           {t("description")}
         </p>
 
@@ -68,10 +65,7 @@ export default function NightlyPage() {
           {t("download")}
         </a>
 
-        <p
-          className="text-[15px] text-muted mt-8"
-          style={{ lineHeight: 1.5 }}
-        >
+        <p className="text-[15px] text-muted mt-8" style={{ lineHeight: 1.5 }}>
           {t.rich("warning", {
             githubLink: (chunks) => (
               <a

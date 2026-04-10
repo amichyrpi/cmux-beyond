@@ -2,7 +2,11 @@
 
 import { useMemo, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { shortcutCategories, type LocalizedText, type Shortcut } from "../../data/cmux-shortcuts";
+import {
+  shortcutCategories,
+  type LocalizedText,
+  type Shortcut,
+} from "../../data/cmux-shortcuts";
 
 function localizedText(text: LocalizedText, locale: string) {
   return locale.startsWith("ja") ? text.ja : text.en;
@@ -33,7 +37,13 @@ function KeyCombo({ combo }: { combo: string[] }) {
   );
 }
 
-function ShortcutRow({ shortcut, locale }: { shortcut: Shortcut; locale: string }) {
+function ShortcutRow({
+  shortcut,
+  locale,
+}: {
+  shortcut: Shortcut;
+  locale: string;
+}) {
   const description = localizedText(shortcut.description, locale);
   const note = shortcut.note ? localizedText(shortcut.note, locale) : undefined;
 
@@ -45,7 +55,10 @@ function ShortcutRow({ shortcut, locale }: { shortcut: Shortcut; locale: string 
       </div>
       <div className="flex shrink-0 items-center gap-3">
         {shortcut.combos.map((combo, idx) => (
-          <span key={`${shortcut.id}-combo-${idx}`} className="inline-flex items-center">
+          <span
+            key={`${shortcut.id}-combo-${idx}`}
+            className="inline-flex items-center"
+          >
             {idx > 0 && (
               <span className="mr-3 select-none font-mono text-[11px] text-muted/30">
                 /
@@ -69,16 +82,22 @@ export function KeyboardShortcuts() {
   const filtered = useMemo(() => {
     const q = normalize(query);
     if (!q) return shortcutCategories;
-    return shortcutCategories.map((cat) => ({
-      ...cat,
-      shortcuts: cat.shortcuts.filter((shortcut) => {
-        const catTitle = t(`cat.${cat.titleKey}`);
-        const description = localizedText(shortcut.description, locale);
-        const note = shortcut.note ? localizedText(shortcut.note, locale) : "";
-        const combos = shortcut.combos.map(comboToText).join(" ");
-        return normalize(`${catTitle} ${combos} ${description} ${note}`).includes(q);
-      }),
-    })).filter((cat) => cat.shortcuts.length > 0);
+    return shortcutCategories
+      .map((cat) => ({
+        ...cat,
+        shortcuts: cat.shortcuts.filter((shortcut) => {
+          const catTitle = t(`cat.${cat.titleKey}`);
+          const description = localizedText(shortcut.description, locale);
+          const note = shortcut.note
+            ? localizedText(shortcut.note, locale)
+            : "";
+          const combos = shortcut.combos.map(comboToText).join(" ");
+          return normalize(
+            `${catTitle} ${combos} ${description} ${note}`,
+          ).includes(q);
+        }),
+      }))
+      .filter((cat) => cat.shortcuts.length > 0);
   }, [locale, query, t]);
 
   return (
@@ -131,7 +150,9 @@ export function KeyboardShortcuts() {
       {filtered.length === 0 ? (
         <div className="py-16 text-center">
           <p className="text-[14px] text-muted/70">{t("noResults")}</p>
-          <p className="mt-1.5 text-[13px] text-muted/40">{t("noResultsHint")}</p>
+          <p className="mt-1.5 text-[13px] text-muted/40">
+            {t("noResultsHint")}
+          </p>
         </div>
       ) : (
         <div className="space-y-10">
@@ -142,13 +163,19 @@ export function KeyboardShortcuts() {
                   {t(`cat.${cat.titleKey}`)}
                 </div>
                 {cat.blurbKey && (
-                  <p className="mt-1 text-[13px] text-muted/50">{t(`cat.${cat.blurbKey}`)}</p>
+                  <p className="mt-1 text-[13px] text-muted/50">
+                    {t(`cat.${cat.blurbKey}`)}
+                  </p>
                 )}
               </div>
               <div className="overflow-hidden rounded-xl border border-border">
                 <div className="divide-y divide-border/60">
                   {cat.shortcuts.map((shortcut) => (
-                    <ShortcutRow key={shortcut.id} shortcut={shortcut} locale={locale} />
+                    <ShortcutRow
+                      key={shortcut.id}
+                      shortcut={shortcut}
+                      locale={locale}
+                    />
                   ))}
                 </div>
               </div>

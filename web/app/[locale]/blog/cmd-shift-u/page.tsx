@@ -3,15 +3,25 @@ import { getTranslations } from "next-intl/server";
 import { buildAlternates } from "../../../../i18n/seo";
 import { Link } from "../../../../i18n/navigation";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "blog.cmdShiftU" });
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
     keywords: [
-      "cmux", "terminal", "macOS", "notifications", "AI coding agents",
-      "keyboard shortcuts", "developer tools", "workflow",
+      "cmux",
+      "terminal",
+      "macOS",
+      "notifications",
+      "AI coding agents",
+      "keyboard shortcuts",
+      "developer tools",
+      "workflow",
     ],
     openGraph: {
       title: t("metaTitle"),
@@ -63,9 +73,7 @@ export default function CmdShiftUPage() {
 
       <p>
         {t.rich("p2", {
-          link: (chunks) => (
-            <Link href="/docs/notifications">{chunks}</Link>
-          ),
+          link: (chunks) => <Link href="/docs/notifications">{chunks}</Link>,
         })}
       </p>
     </>

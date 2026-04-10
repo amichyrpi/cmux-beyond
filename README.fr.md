@@ -148,87 +148,87 @@ Pour plus d'informations sur la configuration de cmux, [consultez notre document
 
 ### Espaces de travail
 
-| Raccourci | Action |
-|----------|--------|
-| ⌘ N | Nouvel espace de travail |
-| ⌘ 1–8 | Aller à l'espace de travail 1–8 |
-| ⌘ 9 | Aller au dernier espace de travail |
-| ⌃ ⌘ ] | Espace de travail suivant |
-| ⌃ ⌘ [ | Espace de travail précédent |
-| ⌘ ⇧ W | Fermer l'espace de travail |
-| ⌘ ⇧ R | Renommer l'espace de travail |
-| ⌘ B | Basculer la barre latérale |
+| Raccourci | Action                             |
+| --------- | ---------------------------------- |
+| ⌘ N       | Nouvel espace de travail           |
+| ⌘ 1–8     | Aller à l'espace de travail 1–8    |
+| ⌘ 9       | Aller au dernier espace de travail |
+| ⌃ ⌘ ]     | Espace de travail suivant          |
+| ⌃ ⌘ [     | Espace de travail précédent        |
+| ⌘ ⇧ W     | Fermer l'espace de travail         |
+| ⌘ ⇧ R     | Renommer l'espace de travail       |
+| ⌘ B       | Basculer la barre latérale         |
 
 ### Surfaces
 
-| Raccourci | Action |
-|----------|--------|
-| ⌘ T | Nouvelle surface |
-| ⌘ ⇧ ] | Surface suivante |
-| ⌘ ⇧ [ | Surface précédente |
-| ⌃ Tab | Surface suivante |
-| ⌃ ⇧ Tab | Surface précédente |
-| ⌃ 1–8 | Aller à la surface 1–8 |
-| ⌃ 9 | Aller à la dernière surface |
-| ⌘ W | Fermer la surface |
+| Raccourci | Action                      |
+| --------- | --------------------------- |
+| ⌘ T       | Nouvelle surface            |
+| ⌘ ⇧ ]     | Surface suivante            |
+| ⌘ ⇧ [     | Surface précédente          |
+| ⌃ Tab     | Surface suivante            |
+| ⌃ ⇧ Tab   | Surface précédente          |
+| ⌃ 1–8     | Aller à la surface 1–8      |
+| ⌃ 9       | Aller à la dernière surface |
+| ⌘ W       | Fermer la surface           |
 
 ### Panneaux divisés
 
-| Raccourci | Action |
-|----------|--------|
-| ⌘ D | Diviser à droite |
-| ⌘ ⇧ D | Diviser vers le bas |
+| Raccourci   | Action                                  |
+| ----------- | --------------------------------------- |
+| ⌘ D         | Diviser à droite                        |
+| ⌘ ⇧ D       | Diviser vers le bas                     |
 | ⌥ ⌘ ← → ↑ ↓ | Focaliser le panneau directionnellement |
-| ⌘ ⇧ H | Faire clignoter le panneau focalisé |
+| ⌘ ⇧ H       | Faire clignoter le panneau focalisé     |
 
 ### Navigateur
 
 Les raccourcis des outils de développement du navigateur suivent les valeurs par défaut de Safari et sont personnalisables dans `Paramètres → Raccourcis clavier`.
 
-| Raccourci | Action |
-|----------|--------|
-| ⌘ ⇧ L | Ouvrir le navigateur en division |
-| ⌘ L | Focaliser la barre d'adresse |
-| ⌘ [ | Reculer |
-| ⌘ ] | Avancer |
-| ⌘ R | Recharger la page |
-| ⌥ ⌘ I | Basculer les outils de développement (par défaut Safari) |
-| ⌥ ⌘ C | Afficher la console JavaScript (par défaut Safari) |
+| Raccourci | Action                                                   |
+| --------- | -------------------------------------------------------- |
+| ⌘ ⇧ L     | Ouvrir le navigateur en division                         |
+| ⌘ L       | Focaliser la barre d'adresse                             |
+| ⌘ [       | Reculer                                                  |
+| ⌘ ]       | Avancer                                                  |
+| ⌘ R       | Recharger la page                                        |
+| ⌥ ⌘ I     | Basculer les outils de développement (par défaut Safari) |
+| ⌥ ⌘ C     | Afficher la console JavaScript (par défaut Safari)       |
 
 ### Notifications
 
-| Raccourci | Action |
-|----------|--------|
-| ⌘ I | Afficher le panneau de notifications |
-| ⌘ ⇧ U | Aller à la dernière non lue |
+| Raccourci | Action                               |
+| --------- | ------------------------------------ |
+| ⌘ I       | Afficher le panneau de notifications |
+| ⌘ ⇧ U     | Aller à la dernière non lue          |
 
 ### Recherche
 
-| Raccourci | Action |
-|----------|--------|
-| ⌘ F | Rechercher |
-| ⌘ G / ⌘ ⇧ G | Résultat suivant / précédent |
-| ⌘ ⇧ F | Masquer la barre de recherche |
-| ⌘ E | Utiliser la sélection pour la recherche |
+| Raccourci   | Action                                  |
+| ----------- | --------------------------------------- |
+| ⌘ F         | Rechercher                              |
+| ⌘ G / ⌘ ⇧ G | Résultat suivant / précédent            |
+| ⌘ ⇧ F       | Masquer la barre de recherche           |
+| ⌘ E         | Utiliser la sélection pour la recherche |
 
 ### Terminal
 
-| Raccourci | Action |
-|----------|--------|
-| ⌘ K | Effacer l'historique de défilement |
-| ⌘ C | Copier (avec sélection) |
-| ⌘ V | Coller |
+| Raccourci | Action                                   |
+| --------- | ---------------------------------------- |
+| ⌘ K       | Effacer l'historique de défilement       |
+| ⌘ C       | Copier (avec sélection)                  |
+| ⌘ V       | Coller                                   |
 | ⌘ + / ⌘ - | Augmenter / diminuer la taille de police |
-| ⌘ 0 | Réinitialiser la taille de police |
+| ⌘ 0       | Réinitialiser la taille de police        |
 
 ### Fenêtre
 
-| Raccourci | Action |
-|----------|--------|
-| ⌘ ⇧ N | Nouvelle fenêtre |
-| ⌘ , | Paramètres |
-| ⌘ ⇧ , | Recharger la configuration |
-| ⌘ Q | Quitter |
+| Raccourci | Action                     |
+| --------- | -------------------------- |
+| ⌘ ⇧ N     | Nouvelle fenêtre           |
+| ⌘ ,       | Paramètres                 |
+| ⌘ ⇧ ,     | Recharger la configuration |
+| ⌘ Q       | Quitter                    |
 
 ## Builds Nightly
 
@@ -239,6 +239,7 @@ cmux NIGHTLY est une application séparée avec son propre identifiant de bundle
 ## Restauration de session (comportement actuel)
 
 Au relancement, cmux restaure actuellement uniquement la disposition et les métadonnées de l'application :
+
 - Disposition des fenêtres/espaces de travail/panneaux
 - Répertoires de travail
 - Historique de défilement du terminal (au mieux)

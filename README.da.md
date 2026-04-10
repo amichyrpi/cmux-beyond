@@ -148,87 +148,87 @@ For mere information om konfiguration af cmux, [se vores dokumentation](https://
 
 ### Workspaces
 
-| Genvej | Handling |
-|----------|--------|
-| ⌘ N | Nyt workspace |
-| ⌘ 1–8 | Hop til workspace 1–8 |
-| ⌘ 9 | Hop til sidste workspace |
-| ⌃ ⌘ ] | Næste workspace |
-| ⌃ ⌘ [ | Forrige workspace |
-| ⌘ ⇧ W | Luk workspace |
-| ⌘ ⇧ R | Omdøb workspace |
-| ⌘ B | Skjul/vis sidebjælke |
+| Genvej | Handling                 |
+| ------ | ------------------------ |
+| ⌘ N    | Nyt workspace            |
+| ⌘ 1–8  | Hop til workspace 1–8    |
+| ⌘ 9    | Hop til sidste workspace |
+| ⌃ ⌘ ]  | Næste workspace          |
+| ⌃ ⌘ [  | Forrige workspace        |
+| ⌘ ⇧ W  | Luk workspace            |
+| ⌘ ⇧ R  | Omdøb workspace          |
+| ⌘ B    | Skjul/vis sidebjælke     |
 
 ### Overflader
 
-| Genvej | Handling |
-|----------|--------|
-| ⌘ T | Ny overflade |
-| ⌘ ⇧ ] | Næste overflade |
-| ⌘ ⇧ [ | Forrige overflade |
-| ⌃ Tab | Næste overflade |
-| ⌃ ⇧ Tab | Forrige overflade |
-| ⌃ 1–8 | Hop til overflade 1–8 |
-| ⌃ 9 | Hop til sidste overflade |
-| ⌘ W | Luk overflade |
+| Genvej  | Handling                 |
+| ------- | ------------------------ |
+| ⌘ T     | Ny overflade             |
+| ⌘ ⇧ ]   | Næste overflade          |
+| ⌘ ⇧ [   | Forrige overflade        |
+| ⌃ Tab   | Næste overflade          |
+| ⌃ ⇧ Tab | Forrige overflade        |
+| ⌃ 1–8   | Hop til overflade 1–8    |
+| ⌃ 9     | Hop til sidste overflade |
+| ⌘ W     | Luk overflade            |
 
 ### Delte Paneler
 
-| Genvej | Handling |
-|----------|--------|
-| ⌘ D | Del til højre |
-| ⌘ ⇧ D | Del nedad |
+| Genvej      | Handling                      |
+| ----------- | ----------------------------- |
+| ⌘ D         | Del til højre                 |
+| ⌘ ⇧ D       | Del nedad                     |
 | ⌥ ⌘ ← → ↑ ↓ | Fokuser panel retningsbestemt |
-| ⌘ ⇧ H | Blink fokuseret panel |
+| ⌘ ⇧ H       | Blink fokuseret panel         |
 
 ### Browser
 
 Browserens udviklerværktøjsgenveje følger Safaris standarder og kan tilpasses i `Indstillinger → Tastaturgenveje`.
 
-| Genvej | Handling |
-|----------|--------|
-| ⌘ ⇧ L | Åbn browser i opdeling |
-| ⌘ L | Fokuser adresselinjen |
-| ⌘ [ | Tilbage |
-| ⌘ ] | Frem |
-| ⌘ R | Genindlæs side |
-| ⌥ ⌘ I | Slå Udviklerværktøjer til/fra (Safari-standard) |
-| ⌥ ⌘ C | Vis JavaScript-konsol (Safari-standard) |
+| Genvej | Handling                                        |
+| ------ | ----------------------------------------------- |
+| ⌘ ⇧ L  | Åbn browser i opdeling                          |
+| ⌘ L    | Fokuser adresselinjen                           |
+| ⌘ [    | Tilbage                                         |
+| ⌘ ]    | Frem                                            |
+| ⌘ R    | Genindlæs side                                  |
+| ⌥ ⌘ I  | Slå Udviklerværktøjer til/fra (Safari-standard) |
+| ⌥ ⌘ C  | Vis JavaScript-konsol (Safari-standard)         |
 
 ### Notifikationer
 
-| Genvej | Handling |
-|----------|--------|
-| ⌘ I | Vis notifikationspanel |
-| ⌘ ⇧ U | Hop til seneste ulæste |
+| Genvej | Handling               |
+| ------ | ---------------------- |
+| ⌘ I    | Vis notifikationspanel |
+| ⌘ ⇧ U  | Hop til seneste ulæste |
 
 ### Søg
 
-| Genvej | Handling |
-|----------|--------|
-| ⌘ F | Søg |
-| ⌘ G / ⌘ ⇧ G | Find næste / forrige |
-| ⌘ ⇧ F | Skjul søgelinje |
-| ⌘ E | Brug markering til søgning |
+| Genvej      | Handling                   |
+| ----------- | -------------------------- |
+| ⌘ F         | Søg                        |
+| ⌘ G / ⌘ ⇧ G | Find næste / forrige       |
+| ⌘ ⇧ F       | Skjul søgelinje            |
+| ⌘ E         | Brug markering til søgning |
 
 ### Terminal
 
-| Genvej | Handling |
-|----------|--------|
-| ⌘ K | Ryd scrollback |
-| ⌘ C | Kopiér (med markering) |
-| ⌘ V | Indsæt |
+| Genvej    | Handling                          |
+| --------- | --------------------------------- |
+| ⌘ K       | Ryd scrollback                    |
+| ⌘ C       | Kopiér (med markering)            |
+| ⌘ V       | Indsæt                            |
 | ⌘ + / ⌘ - | Forøg / formindsk skriftstørrelse |
-| ⌘ 0 | Nulstil skriftstørrelse |
+| ⌘ 0       | Nulstil skriftstørrelse           |
 
 ### Vindue
 
-| Genvej | Handling |
-|----------|--------|
-| ⌘ ⇧ N | Nyt vindue |
-| ⌘ , | Indstillinger |
-| ⌘ ⇧ , | Genindlæs konfiguration |
-| ⌘ Q | Afslut |
+| Genvej | Handling                |
+| ------ | ----------------------- |
+| ⌘ ⇧ N  | Nyt vindue              |
+| ⌘ ,    | Indstillinger           |
+| ⌘ ⇧ ,  | Genindlæs konfiguration |
+| ⌘ Q    | Afslut                  |
 
 ## Nightly Builds
 
@@ -239,6 +239,7 @@ cmux NIGHTLY er en separat app med sit eget bundle-ID, så den kører side om si
 ## Sessionsgenoprettelse (nuværende adfærd)
 
 Ved genstart genopretter cmux i øjeblikket kun app-layout og metadata:
+
 - Vindue/workspace/panel-layout
 - Arbejdsmapper
 - Terminal-scrollback (best effort)

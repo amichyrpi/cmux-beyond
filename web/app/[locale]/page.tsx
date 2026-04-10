@@ -105,10 +105,7 @@ function HomeContent() {
                 <span className="text-muted">
                   {t.rich("feature.keyboardShortcutsDesc", {
                     link: (chunks) => (
-                      <a
-                        href="/docs/keyboard-shortcuts"
-                        className={linkClass}
-                      >
+                      <a href="/docs/keyboard-shortcuts" className={linkClass}>
                         {chunks}
                       </a>
                     ),
@@ -138,10 +135,7 @@ function HomeContent() {
           <h2 className="text-xs font-medium text-muted tracking-tight mb-3">
             {t("faq")}
           </h2>
-          <div
-            className="space-y-5 text-[15px]"
-            style={{ lineHeight: 1.5 }}
-          >
+          <div className="space-y-5 text-[15px]" style={{ lineHeight: 1.5 }}>
             <div>
               <p className="font-medium mb-1">{t("faqGhosttyQ")}</p>
               <p className="text-muted">
@@ -239,47 +233,47 @@ function HomeContent() {
             {testimonials.map((item) => {
               const translation = getTestimonialTranslation(item, locale, tt);
               return (
-              <li key={item.url}>
-                <span>
-                  <a
-                    href={item.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group"
-                  >
-                    <span className="text-muted group-hover:text-foreground transition-colors">
-                      &quot;{item.text}&quot;
-                    </span>
-                    {translation && (
-                      <span className="text-muted/60 text-xs italic">
-                        {" "}
-                        — {translation}
+                <li key={item.url}>
+                  <span>
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group"
+                    >
+                      <span className="text-muted group-hover:text-foreground transition-colors">
+                        &quot;{item.text}&quot;
                       </span>
-                    )}
-                  </a>{" "}
-                  <a
-                    href={item.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-muted hover:text-foreground transition-colors"
-                  >
-                    —
-                    {item.avatar && (
-                      <img
-                        src={item.avatar}
-                        alt={item.name}
-                        width={16}
-                        height={16}
-                        className="rounded-full inline-block"
-                      />
-                    )}
-                    {item.name}
-                    {"subtitle" in item && item.subtitle
-                      ? `, ${item.subtitle}`
-                      : ""}
-                  </a>
-                </span>
-              </li>
+                      {translation && (
+                        <span className="text-muted/60 text-xs italic">
+                          {" "}
+                          — {translation}
+                        </span>
+                      )}
+                    </a>{" "}
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-muted hover:text-foreground transition-colors"
+                    >
+                      —
+                      {item.avatar && (
+                        <img
+                          src={item.avatar}
+                          alt={item.name}
+                          width={16}
+                          height={16}
+                          className="rounded-full inline-block"
+                        />
+                      )}
+                      {item.name}
+                      {"subtitle" in item && item.subtitle
+                        ? `, ${item.subtitle}`
+                        : ""}
+                    </a>
+                  </span>
+                </li>
               );
             })}
           </ul>

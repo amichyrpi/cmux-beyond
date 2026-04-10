@@ -3,15 +3,26 @@ import { getTranslations } from "next-intl/server";
 import { buildAlternates } from "../../../../i18n/seo";
 import { Link } from "../../../../i18n/navigation";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "blog.cmuxOmo" });
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
     keywords: [
-      "cmux", "OpenCode", "oh-my-opencode", "oh-my-openagent", "tmux",
-      "terminal", "macOS", "AI coding agents", "multi-model",
+      "cmux",
+      "OpenCode",
+      "oh-my-opencode",
+      "oh-my-openagent",
+      "tmux",
+      "terminal",
+      "macOS",
+      "AI coding agents",
+      "multi-model",
     ],
     openGraph: {
       title: t("metaTitle"),
@@ -63,7 +74,9 @@ export default function CmuxOmoPage() {
         {t.rich("p1", {
           code: (chunks) => <code>{chunks}</code>,
           claudeTeamsLink: (chunks) => (
-            <Link href="/docs/agent-integrations/claude-code-teams">{chunks}</Link>
+            <Link href="/docs/agent-integrations/claude-code-teams">
+              {chunks}
+            </Link>
           ),
         })}
       </p>
@@ -74,7 +87,9 @@ export default function CmuxOmoPage() {
       </p>
 
       <p className="mt-4">
-        <Link href="/docs/agent-integrations/oh-my-opencode">Read the docs &rarr;</Link>
+        <Link href="/docs/agent-integrations/oh-my-opencode">
+          Read the docs &rarr;
+        </Link>
       </p>
     </>
   );

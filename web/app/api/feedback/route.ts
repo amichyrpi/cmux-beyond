@@ -107,8 +107,19 @@ export async function POST(request: Request) {
   }
 
   const {
-    appBuild, appCommit, appVersion, architecture, bundleIdentifier, chip,
-    displayInfo, email, hardwareModel, locale, memoryGB, message, osVersion,
+    appBuild,
+    appCommit,
+    appVersion,
+    architecture,
+    bundleIdentifier,
+    chip,
+    displayInfo,
+    email,
+    hardwareModel,
+    locale,
+    memoryGB,
+    message,
+    osVersion,
   } = parsed.data;
   const subject = buildSubject(email, message, appVersion);
   const attachments = attachmentsResult.attachments;
@@ -224,7 +235,10 @@ async function prepareAttachments(values: FormDataEntryValue[]) {
     totalSize += file.size;
     if (totalSize > maxTotalAttachmentBytes) {
       return {
-        errorResponse: jsonError("Total image attachment size is too large", 413),
+        errorResponse: jsonError(
+          "Total image attachment size is too large",
+          413,
+        ),
       };
     }
 

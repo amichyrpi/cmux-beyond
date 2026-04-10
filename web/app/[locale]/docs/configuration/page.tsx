@@ -5,7 +5,10 @@ import { Link } from "../../../../i18n/navigation";
 import { CodeBlock } from "../../components/code-block";
 import { Callout } from "../../components/callout";
 import settingsSchema from "../../../../data/cmux-settings.schema.json";
-import { shortcutCategories, type LocalizedText } from "../../../../data/cmux-shortcuts";
+import {
+  shortcutCategories,
+  type LocalizedText,
+} from "../../../../data/cmux-shortcuts";
 
 type SchemaProperty = {
   title?: string;
@@ -75,7 +78,11 @@ const settingsFileExample = `{
   // },
 }`;
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "docs.configuration" });
   return {
@@ -118,7 +125,9 @@ function formatSchemaType(property: SchemaProperty): string {
     return property.type.join(" | ");
   }
   if (property.type === "array") {
-    const itemType = property.items ? formatSchemaType(property.items) : "unknown";
+    const itemType = property.items
+      ? formatSchemaType(property.items)
+      : "unknown";
     return `array<${itemType}>`;
   }
   if (property.type === "object") {
@@ -144,13 +153,21 @@ function hasComplexDefaultValue(value: unknown): boolean {
   return typeof value === "object" && value !== null;
 }
 
-function PropertyCard({ path, property }: { path: string; property: SchemaProperty }) {
+function PropertyCard({
+  path,
+  property,
+}: {
+  path: string;
+  property: SchemaProperty;
+}) {
   return (
     <div className="rounded-xl border border-border/70 bg-background/40 p-4">
       <div className="mb-2 flex items-center gap-2">
         <code className="text-[12px] font-medium">{path}</code>
       </div>
-      {property.description && <p className="mb-3 text-sm text-muted">{property.description}</p>}
+      {property.description && (
+        <p className="mb-3 text-sm text-muted">{property.description}</p>
+      )}
       <dl className="space-y-2 text-sm">
         <div>
           <dt className="font-medium text-foreground">Type</dt>
@@ -192,7 +209,9 @@ function PropertyGrid({
   properties: Record<string, SchemaProperty>;
   skip?: string[];
 }) {
-  const entries = Object.entries(properties).filter(([name]) => !skip.includes(name));
+  const entries = Object.entries(properties).filter(
+    ([name]) => !skip.includes(name),
+  );
   return (
     <div className="not-prose grid gap-4 md:grid-cols-2">
       {entries.map(([name, property]) => (
@@ -231,7 +250,9 @@ export default function ConfigurationPage() {
           <code>~/.config/ghostty/config</code>
         </li>
         <li>
-          <code>~/Library/Application Support/com.mitchellh.ghostty/config</code>
+          <code>
+            ~/Library/Application Support/com.mitchellh.ghostty/config
+          </code>
         </li>
       </ol>
       <p>{t("createConfig")}</p>
@@ -239,7 +260,10 @@ export default function ConfigurationPage() {
 touch ~/.config/ghostty/config`}</CodeBlock>
 
       <h2>{t("exampleConfig")}</h2>
-      <CodeBlock title="~/.config/ghostty/config" lang="ini">{`font-family = SF Mono
+      <CodeBlock
+        title="~/.config/ghostty/config"
+        lang="ini"
+      >{`font-family = SF Mono
 font-size = 13
 theme = One Dark
 scrollback-limit = 50000
@@ -248,8 +272,9 @@ working-directory = ~/code`}</CodeBlock>
 
       <h2>cmux settings.json</h2>
       <p>
-        cmux keeps app-owned settings in a separate user file instead of mixing them into Ghostty
-        config. On launch, if neither settings location exists, cmux writes a commented template to{" "}
+        cmux keeps app-owned settings in a separate user file instead of mixing
+        them into Ghostty config. On launch, if neither settings location
+        exists, cmux writes a commented template to{" "}
         <code>~/.config/cmux/settings.json</code>.
       </p>
       <ol>
@@ -257,27 +282,32 @@ working-directory = ~/code`}</CodeBlock>
           <code>~/.config/cmux/settings.json</code>
         </li>
         <li>
-          <code>~/Library/Application Support/com.cmuxterm.app/settings.json</code>
+          <code>
+            ~/Library/Application Support/com.cmuxterm.app/settings.json
+          </code>
         </li>
       </ol>
       <Callout type="info">
-        <strong>Precedence:</strong> <code>~/.config/cmux/settings.json</code> wins over the
-        Application Support fallback. File-managed values override the value saved in the Settings
-        window. Remove a key to fall back to the Settings value again.
+        <strong>Precedence:</strong> <code>~/.config/cmux/settings.json</code>{" "}
+        wins over the Application Support fallback. File-managed values override
+        the value saved in the Settings window. Remove a key to fall back to the
+        Settings value again.
       </Callout>
       <Callout type="info">
-        <strong>Reload:</strong> edit the file, then use <code>Cmd+Shift+,</code> or{" "}
-        <code>cmux reload-config</code> to re-read it without restarting the app.
+        <strong>Reload:</strong> edit the file, then use{" "}
+        <code>Cmd+Shift+,</code> or <code>cmux reload-config</code> to re-read
+        it without restarting the app.
       </Callout>
       <Callout type="warn">
-        <strong>Migrations:</strong> keep <code>schemaVersion</code> at <code>1</code> for now.
-        Future cmux versions will use that field for upgrades. If cmux sees a newer schema version,
-        it logs a warning and parses known keys only.
+        <strong>Migrations:</strong> keep <code>schemaVersion</code> at{" "}
+        <code>1</code> for now. Future cmux versions will use that field for
+        upgrades. If cmux sees a newer schema version, it logs a warning and
+        parses known keys only.
       </Callout>
       <p>
-        The file accepts JSON with comments and trailing commas. The canonical schema is published
-        at <a href={schemaUrl}>{schemaUrl}</a> and the source lives at{" "}
-        <a href={schemaSourceUrl}>{schemaSourceUrl}</a>.
+        The file accepts JSON with comments and trailing commas. The canonical
+        schema is published at <a href={schemaUrl}>{schemaUrl}</a> and the
+        source lives at <a href={schemaSourceUrl}>{schemaSourceUrl}</a>.
       </p>
       <CodeBlock title="~/.config/cmux/settings.json" lang="json">
         {settingsFileExample}
@@ -285,17 +315,21 @@ working-directory = ~/code`}</CodeBlock>
 
       <h2>Schema reference</h2>
       <p>
-        This reference covers every supported key in <code>settings.json</code>. The embedded
-        browser, sidebar, notifications, automation, and cmux-owned keyboard shortcuts all live
-        here.
+        This reference covers every supported key in <code>settings.json</code>.
+        The embedded browser, sidebar, notifications, automation, and cmux-owned
+        keyboard shortcuts all live here.
       </p>
 
       <h3>Metadata</h3>
       <PropertyGrid
         prefix=""
-        properties={Object.fromEntries(
-          Object.entries(metadataProperties).filter(([, property]) => property)
-        ) as Record<string, SchemaProperty>}
+        properties={
+          Object.fromEntries(
+            Object.entries(metadataProperties).filter(
+              ([, property]) => property,
+            ),
+          ) as Record<string, SchemaProperty>
+        }
       />
 
       {sectionOrder.map((sectionName) => {
@@ -312,15 +346,20 @@ working-directory = ~/code`}</CodeBlock>
               <code>{sectionName}</code>
             </h3>
             {property.description && <p>{property.description}</p>}
-            <PropertyGrid prefix={sectionName} properties={property.properties} skip={skipBindings} />
+            <PropertyGrid
+              prefix={sectionName}
+              properties={property.properties}
+              skip={skipBindings}
+            />
             {sectionName === "workspaceColors" && (
               <>
                 <p>
-                  <code>workspaceColors.colors</code> is the full palette. Keep the built-in keys
-                  you want, delete keys to remove colors from the picker, and add more named color
-                  entries to extend it. Older <code>paletteOverrides</code> and{" "}
-                  <code>customColors</code> files still parse during upgrades, but new files
-                  should use <code>colors</code>.
+                  <code>workspaceColors.colors</code> is the full palette. Keep
+                  the built-in keys you want, delete keys to remove colors from
+                  the picker, and add more named color entries to extend it.
+                  Older <code>paletteOverrides</code> and{" "}
+                  <code>customColors</code> files still parse during upgrades,
+                  but new files should use <code>colors</code>.
                 </p>
                 <CodeBlock lang="json">{`{
   "workspaceColors": {
@@ -341,9 +380,10 @@ working-directory = ~/code`}</CodeBlock>
         <code>shortcuts.bindings</code>
       </h3>
       <p>
-        Use a string for a single shortcut, or a two-item array for a chord. Example:{" "}
-        <code>[&quot;ctrl+b&quot;, &quot;c&quot;]</code>. Numbered actions use <code>1</code> as
-        the stored default and still match digits <code>1</code> through <code>9</code>.
+        Use a string for a single shortcut, or a two-item array for a chord.
+        Example: <code>[&quot;ctrl+b&quot;, &quot;c&quot;]</code>. Numbered
+        actions use <code>1</code> as the stored default and still match digits{" "}
+        <code>1</code> through <code>9</code>.
       </p>
       <p>
         The defaults below are the same cmux-owned actions listed on the{" "}
@@ -362,7 +402,9 @@ working-directory = ~/code`}</CodeBlock>
               >
                 <div>
                   <div className="mb-1 flex items-center gap-2">
-                    <code className="text-[12px] font-medium">{shortcut.id}</code>
+                    <code className="text-[12px] font-medium">
+                      {shortcut.id}
+                    </code>
                   </div>
                   <p className="text-sm text-foreground/90">
                     {localizedText(shortcut.description, locale)}
@@ -374,7 +416,9 @@ working-directory = ~/code`}</CodeBlock>
                   </p>
                 </div>
                 <div className="text-sm text-muted">
-                  <div className="font-medium text-foreground">Default file value</div>
+                  <div className="font-medium text-foreground">
+                    Default file value
+                  </div>
                   <code>{shortcutComboToConfig(shortcut.combos[0] ?? [])}</code>
                 </div>
               </div>

@@ -4,7 +4,11 @@ import { buildAlternates } from "../../../../i18n/seo";
 import { CodeBlock } from "../../components/code-block";
 import { Callout } from "../../components/callout";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "docs.notifications" });
   return {
@@ -57,15 +61,21 @@ export default function NotificationsPage() {
         </thead>
         <tbody>
           <tr>
-            <td><code>CMUX_NOTIFICATION_TITLE</code></td>
+            <td>
+              <code>CMUX_NOTIFICATION_TITLE</code>
+            </td>
             <td>{t("envTitle")}</td>
           </tr>
           <tr>
-            <td><code>CMUX_NOTIFICATION_SUBTITLE</code></td>
+            <td>
+              <code>CMUX_NOTIFICATION_SUBTITLE</code>
+            </td>
             <td>{t("envSubtitle")}</td>
           </tr>
           <tr>
-            <td><code>CMUX_NOTIFICATION_BODY</code></td>
+            <td>
+              <code>CMUX_NOTIFICATION_BODY</code>
+            </td>
             <td>{t("envBody")}</td>
           </tr>
         </tbody>
@@ -141,21 +151,24 @@ printf '\\e]99;i=1;e=1;d=1;p=body:All tests passed\\e\\\\'`}</CodeBlock>
         </tbody>
       </table>
 
-      <Callout>
-        {t("comparisonCallout")}
-      </Callout>
+      <Callout>{t("comparisonCallout")}</Callout>
 
       <h2>{t("claudeCodeHooks")}</h2>
       <p>
         {t.rich("claudeCodeHooksDesc", {
           link: (chunks) => (
-            <a href="https://docs.anthropic.com/en/docs/claude-code">{chunks}</a>
+            <a href="https://docs.anthropic.com/en/docs/claude-code">
+              {chunks}
+            </a>
           ),
         })}
       </p>
 
       <h3>{t("createHookScript")}</h3>
-      <CodeBlock title="~/.claude/hooks/cmux-notify.sh" lang="bash">{`#!/bin/bash
+      <CodeBlock
+        title="~/.claude/hooks/cmux-notify.sh"
+        lang="bash"
+      >{`#!/bin/bash
 # Skip if not in cmux
 [ -S /tmp/cmux.sock ] || exit 0
 
@@ -206,7 +219,9 @@ esac`}</CodeBlock>
       <p>
         {t.rich("copilotCliHooksDesc", {
           link: (chunks) => (
-            <a href="https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/use-hooks">{chunks}</a>
+            <a href="https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/use-hooks">
+              {chunks}
+            </a>
           ),
         })}
       </p>
@@ -287,7 +302,10 @@ notify('Build Done', 'webpack finished');`}</CodeBlock>
 
       <h3>{t("tmuxPassthrough")}</h3>
       <p>{t("tmuxDesc")}</p>
-      <CodeBlock title=".tmux.conf" lang="bash">{`set -g allow-passthrough on`}</CodeBlock>
+      <CodeBlock
+        title=".tmux.conf"
+        lang="bash"
+      >{`set -g allow-passthrough on`}</CodeBlock>
       <CodeBlock lang="bash">{`printf '\\ePtmux;\\e\\e]777;notify;Title;Body\\a\\e\\\\'`}</CodeBlock>
     </>
   );

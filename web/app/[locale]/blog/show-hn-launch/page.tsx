@@ -6,16 +6,30 @@ import { Link } from "../../../../i18n/navigation";
 import { Tweet } from "react-tweet";
 import starHistory from "./star-history.png";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "blog.showHnLaunch" });
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
     keywords: [
-      "cmux", "Show HN", "Hacker News", "terminal", "macOS", "Ghostty",
-      "libghostty", "AI coding agents", "Claude Code", "Codex", "launch",
-      "vertical tabs", "notification rings",
+      "cmux",
+      "Show HN",
+      "Hacker News",
+      "terminal",
+      "macOS",
+      "Ghostty",
+      "libghostty",
+      "AI coding agents",
+      "Claude Code",
+      "Codex",
+      "launch",
+      "vertical tabs",
+      "notification rings",
     ],
     openGraph: {
       title: t("metaTitle"),
@@ -48,7 +62,9 @@ export default function ShowHNLaunchPage() {
       </div>
 
       <h1>{t("title")}</h1>
-      <time dateTime="2026-02-21" className="text-sm text-muted">{t("date")}</time>
+      <time dateTime="2026-02-21" className="text-sm text-muted">
+        {t("date")}
+      </time>
 
       <p className="mt-6">
         {t.rich("intro", {
@@ -88,7 +104,9 @@ export default function ShowHNLaunchPage() {
           really appreciate Mitchell Hashimoto creating libghostty; it feels
           like an exciting time to be a terminal user.
         </p>
-        <p>Some feedback (since you were asking for it elsewhere in the thread!):</p>
+        <p>
+          Some feedback (since you were asking for it elsewhere in the thread!):
+        </p>
         <ul className="list-disc pl-5 space-y-1">
           <li>
             It&apos;s not obvious/easy to open browser dev tools (cmd-alt-i
@@ -107,7 +125,10 @@ export default function ShowHNLaunchPage() {
         </ul>
         <p className="text-xs">
           —{" "}
-          <a href="https://news.ycombinator.com/item?id=47083596" className="hover:text-foreground transition-colors">
+          <a
+            href="https://news.ycombinator.com/item?id=47083596"
+            className="hover:text-foreground transition-colors"
+          >
             johnthedebs
           </a>
         </p>

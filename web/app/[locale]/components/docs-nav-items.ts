@@ -24,10 +24,19 @@ export const navItems: NavEntry[] = [
   {
     sectionKey: "agentIntegrations",
     children: [
-      { titleKey: "claudeCodeTeams", href: "/docs/agent-integrations/claude-code-teams" },
-      { titleKey: "ohMyOpenCode", href: "/docs/agent-integrations/oh-my-opencode" },
+      {
+        titleKey: "claudeCodeTeams",
+        href: "/docs/agent-integrations/claude-code-teams",
+      },
+      {
+        titleKey: "ohMyOpenCode",
+        href: "/docs/agent-integrations/oh-my-opencode",
+      },
       { titleKey: "ohMyCodex", href: "/docs/agent-integrations/oh-my-codex" },
-      { titleKey: "ohMyClaudeCode", href: "/docs/agent-integrations/oh-my-claudecode" },
+      {
+        titleKey: "ohMyClaudeCode",
+        href: "/docs/agent-integrations/oh-my-claudecode",
+      },
     ],
   },
   { titleKey: "changelog", href: "/docs/changelog" },

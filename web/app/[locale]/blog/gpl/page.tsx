@@ -3,15 +3,25 @@ import { getTranslations } from "next-intl/server";
 import { buildAlternates } from "../../../../i18n/seo";
 import { Link } from "../../../../i18n/navigation";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "blog.gpl" });
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
     keywords: [
-      "cmux", "GPL", "AGPL", "open source", "license",
-      "terminal", "macOS", "copyleft",
+      "cmux",
+      "GPL",
+      "AGPL",
+      "open source",
+      "license",
+      "terminal",
+      "macOS",
+      "copyleft",
     ],
     openGraph: {
       title: t("metaTitle"),

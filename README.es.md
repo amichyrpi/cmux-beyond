@@ -148,87 +148,87 @@ Para más información sobre cómo configurar cmux, [visita nuestra documentaci�
 
 ### Espacios de trabajo
 
-| Atajo | Acción |
-|----------|--------|
-| ⌘ N | Nuevo espacio de trabajo |
-| ⌘ 1–8 | Ir al espacio de trabajo 1–8 |
-| ⌘ 9 | Ir al último espacio de trabajo |
-| ⌃ ⌘ ] | Siguiente espacio de trabajo |
-| ⌃ ⌘ [ | Espacio de trabajo anterior |
-| ⌘ ⇧ W | Cerrar espacio de trabajo |
-| ⌘ ⇧ R | Renombrar espacio de trabajo |
-| ⌘ B | Alternar barra lateral |
+| Atajo | Acción                          |
+| ----- | ------------------------------- |
+| ⌘ N   | Nuevo espacio de trabajo        |
+| ⌘ 1–8 | Ir al espacio de trabajo 1–8    |
+| ⌘ 9   | Ir al último espacio de trabajo |
+| ⌃ ⌘ ] | Siguiente espacio de trabajo    |
+| ⌃ ⌘ [ | Espacio de trabajo anterior     |
+| ⌘ ⇧ W | Cerrar espacio de trabajo       |
+| ⌘ ⇧ R | Renombrar espacio de trabajo    |
+| ⌘ B   | Alternar barra lateral          |
 
 ### Superficies
 
-| Atajo | Acción |
-|----------|--------|
-| ⌘ T | Nueva superficie |
-| ⌘ ⇧ ] | Siguiente superficie |
-| ⌘ ⇧ [ | Superficie anterior |
-| ⌃ Tab | Siguiente superficie |
-| ⌃ ⇧ Tab | Superficie anterior |
-| ⌃ 1–8 | Ir a la superficie 1–8 |
-| ⌃ 9 | Ir a la última superficie |
-| ⌘ W | Cerrar superficie |
+| Atajo   | Acción                    |
+| ------- | ------------------------- |
+| ⌘ T     | Nueva superficie          |
+| ⌘ ⇧ ]   | Siguiente superficie      |
+| ⌘ ⇧ [   | Superficie anterior       |
+| ⌃ Tab   | Siguiente superficie      |
+| ⌃ ⇧ Tab | Superficie anterior       |
+| ⌃ 1–8   | Ir a la superficie 1–8    |
+| ⌃ 9     | Ir a la última superficie |
+| ⌘ W     | Cerrar superficie         |
 
 ### Paneles divididos
 
-| Atajo | Acción |
-|----------|--------|
-| ⌘ D | Dividir a la derecha |
-| ⌘ ⇧ D | Dividir hacia abajo |
+| Atajo       | Acción                         |
+| ----------- | ------------------------------ |
+| ⌘ D         | Dividir a la derecha           |
+| ⌘ ⇧ D       | Dividir hacia abajo            |
 | ⌥ ⌘ ← → ↑ ↓ | Enfocar panel direccionalmente |
-| ⌘ ⇧ H | Destellar panel enfocado |
+| ⌘ ⇧ H       | Destellar panel enfocado       |
 
 ### Navegador
 
 Los atajos de herramientas de desarrollo del navegador siguen los valores predeterminados de Safari y son personalizables en `Ajustes → Atajos de teclado`.
 
-| Atajo | Acción |
-|----------|--------|
-| ⌘ ⇧ L | Abrir navegador en división |
-| ⌘ L | Enfocar barra de direcciones |
-| ⌘ [ | Atrás |
-| ⌘ ] | Adelante |
-| ⌘ R | Recargar página |
+| Atajo | Acción                                                         |
+| ----- | -------------------------------------------------------------- |
+| ⌘ ⇧ L | Abrir navegador en división                                    |
+| ⌘ L   | Enfocar barra de direcciones                                   |
+| ⌘ [   | Atrás                                                          |
+| ⌘ ]   | Adelante                                                       |
+| ⌘ R   | Recargar página                                                |
 | ⌥ ⌘ I | Alternar herramientas de desarrollo (predeterminado de Safari) |
-| ⌥ ⌘ C | Mostrar consola de JavaScript (predeterminado de Safari) |
+| ⌥ ⌘ C | Mostrar consola de JavaScript (predeterminado de Safari)       |
 
 ### Notificaciones
 
-| Atajo | Acción |
-|----------|--------|
-| ⌘ I | Mostrar panel de notificaciones |
-| ⌘ ⇧ U | Ir a la última no leída |
+| Atajo | Acción                          |
+| ----- | ------------------------------- |
+| ⌘ I   | Mostrar panel de notificaciones |
+| ⌘ ⇧ U | Ir a la última no leída         |
 
 ### Buscar
 
-| Atajo | Acción |
-|----------|--------|
-| ⌘ F | Buscar |
+| Atajo       | Acción                      |
+| ----------- | --------------------------- |
+| ⌘ F         | Buscar                      |
 | ⌘ G / ⌘ ⇧ G | Buscar siguiente / anterior |
-| ⌘ ⇧ F | Ocultar barra de búsqueda |
-| ⌘ E | Usar selección para buscar |
+| ⌘ ⇧ F       | Ocultar barra de búsqueda   |
+| ⌘ E         | Usar selección para buscar  |
 
 ### Terminal
 
-| Atajo | Acción |
-|----------|--------|
-| ⌘ K | Limpiar historial de desplazamiento |
-| ⌘ C | Copiar (con selección) |
-| ⌘ V | Pegar |
+| Atajo     | Acción                                |
+| --------- | ------------------------------------- |
+| ⌘ K       | Limpiar historial de desplazamiento   |
+| ⌘ C       | Copiar (con selección)                |
+| ⌘ V       | Pegar                                 |
 | ⌘ + / ⌘ - | Aumentar / disminuir tamaño de fuente |
-| ⌘ 0 | Restablecer tamaño de fuente |
+| ⌘ 0       | Restablecer tamaño de fuente          |
 
 ### Ventana
 
-| Atajo | Acción |
-|----------|--------|
-| ⌘ ⇧ N | Nueva ventana |
-| ⌘ , | Ajustes |
+| Atajo | Acción                 |
+| ----- | ---------------------- |
+| ⌘ ⇧ N | Nueva ventana          |
+| ⌘ ,   | Ajustes                |
 | ⌘ ⇧ , | Recargar configuración |
-| ⌘ Q | Salir |
+| ⌘ Q   | Salir                  |
 
 ## Compilaciones nocturnas
 
@@ -239,6 +239,7 @@ cmux NIGHTLY es una app separada con su propio bundle ID, por lo que se ejecuta 
 ## Restauración de sesión (comportamiento actual)
 
 Al relanzar, cmux actualmente restaura solo el diseño y los metadatos de la aplicación:
+
 - Diseño de ventanas/espacios de trabajo/paneles
 - Directorios de trabajo
 - Historial de desplazamiento del terminal (mejor esfuerzo)

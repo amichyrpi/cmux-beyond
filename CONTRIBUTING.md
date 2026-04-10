@@ -9,12 +9,14 @@
 ## Getting Started
 
 1. Clone the repository with submodules:
+
    ```bash
    git clone --recursive https://github.com/manaflow-ai/cmux.git
    cd cmux
    ```
 
 2. Run the setup script:
+
    ```bash
    ./scripts/setup.sh
    ```
@@ -32,13 +34,13 @@
 
 ## Development Scripts
 
-| Script | Description |
-|--------|-------------|
-| `./scripts/setup.sh` | One-time setup (submodules + xcframework) |
-| `./scripts/reload.sh` | Build Debug app (pass `--launch` to also open it) |
-| `./scripts/reloadp.sh` | Build and launch Release app |
-| `./scripts/reload2.sh` | Reload both Debug and Release |
-| `./scripts/rebuild.sh` | Clean rebuild |
+| Script                 | Description                                       |
+| ---------------------- | ------------------------------------------------- |
+| `./scripts/setup.sh`   | One-time setup (submodules + xcframework)         |
+| `./scripts/reload.sh`  | Build Debug app (pass `--launch` to also open it) |
+| `./scripts/reloadp.sh` | Build and launch Release app                      |
+| `./scripts/reload2.sh` | Reload both Debug and Release                     |
+| `./scripts/rebuild.sh` | Clean rebuild                                     |
 
 ## Rebuilding GhosttyKit
 

@@ -48,19 +48,14 @@ export default function BlogPage() {
       <div className="space-y-4 mt-6">
         {blogSlugs.map((slug) => (
           <article key={slug}>
-            <Link
-              href={`/blog/${slugToPath[slug]}`}
-              className="block group"
-            >
+            <Link href={`/blog/${slugToPath[slug]}`} className="block group">
               <h2 className="text-lg font-medium group-hover:underline">
                 {t(`posts.${slug}.title`)}
               </h2>
               <time className="text-sm text-muted">
                 {t(`posts.${slug}.date`)}
               </time>
-              <p className="mt-1 text-muted">
-                {t(`posts.${slug}.summary`)}
-              </p>
+              <p className="mt-1 text-muted">{t(`posts.${slug}.summary`)}</p>
             </Link>
           </article>
         ))}

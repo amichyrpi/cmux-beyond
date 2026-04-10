@@ -1,7 +1,7 @@
 <h1 align="center">cmux</h1>
 <p align="center">A Ghostty-based macOS terminal with vertical tabs and notifications for AI coding agents</p>
 
-<h1 align="center" font=>This is a fork of [cmux](https://github.com/manaflow-ai/cmux) and it's not meant to be used by other users.</h1>
+<h1 align="center" font=>This is a fork of cmux and it's not meant to be used by other users.</h1>
 
 <p align="center">
   <a href="https://github.com/manaflow-ai/cmux/releases/latest/download/cmux-macos.dmg">
@@ -148,87 +148,87 @@ For more info on how to configure cmux, [head over to our docs](https://cmux.com
 
 ### Workspaces
 
-| Shortcut | Action |
-|----------|--------|
-| ⌘ N | New workspace |
-| ⌘ 1–8 | Jump to workspace 1–8 |
-| ⌘ 9 | Jump to last workspace |
-| ⌃ ⌘ ] | Next workspace |
-| ⌃ ⌘ [ | Previous workspace |
-| ⌘ ⇧ W | Close workspace |
-| ⌘ ⇧ R | Rename workspace |
-| ⌘ B | Toggle sidebar |
+| Shortcut | Action                 |
+| -------- | ---------------------- |
+| ⌘ N      | New workspace          |
+| ⌘ 1–8    | Jump to workspace 1–8  |
+| ⌘ 9      | Jump to last workspace |
+| ⌃ ⌘ ]    | Next workspace         |
+| ⌃ ⌘ [    | Previous workspace     |
+| ⌘ ⇧ W    | Close workspace        |
+| ⌘ ⇧ R    | Rename workspace       |
+| ⌘ B      | Toggle sidebar         |
 
 ### Surfaces
 
-| Shortcut | Action |
-|----------|--------|
-| ⌘ T | New surface |
-| ⌘ ⇧ ] | Next surface |
-| ⌘ ⇧ [ | Previous surface |
-| ⌃ Tab | Next surface |
-| ⌃ ⇧ Tab | Previous surface |
-| ⌃ 1–8 | Jump to surface 1–8 |
-| ⌃ 9 | Jump to last surface |
-| ⌘ W | Close surface |
+| Shortcut | Action               |
+| -------- | -------------------- |
+| ⌘ T      | New surface          |
+| ⌘ ⇧ ]    | Next surface         |
+| ⌘ ⇧ [    | Previous surface     |
+| ⌃ Tab    | Next surface         |
+| ⌃ ⇧ Tab  | Previous surface     |
+| ⌃ 1–8    | Jump to surface 1–8  |
+| ⌃ 9      | Jump to last surface |
+| ⌘ W      | Close surface        |
 
 ### Split Panes
 
-| Shortcut | Action |
-|----------|--------|
-| ⌘ D | Split right |
-| ⌘ ⇧ D | Split down |
+| Shortcut    | Action                   |
+| ----------- | ------------------------ |
+| ⌘ D         | Split right              |
+| ⌘ ⇧ D       | Split down               |
 | ⌥ ⌘ ← → ↑ ↓ | Focus pane directionally |
-| ⌘ ⇧ H | Flash focused panel |
+| ⌘ ⇧ H       | Flash focused panel      |
 
 ### Browser
 
 Browser developer-tool shortcuts follow Safari defaults and are customizable in `Settings → Keyboard Shortcuts`.
 
-| Shortcut | Action |
-|----------|--------|
-| ⌘ ⇧ L | Open browser in split |
-| ⌘ L | Focus address bar |
-| ⌘ [ | Back |
-| ⌘ ] | Forward |
-| ⌘ R | Reload page |
-| ⌥ ⌘ I | Toggle Developer Tools (Safari default) |
-| ⌥ ⌘ C | Show JavaScript Console (Safari default) |
+| Shortcut | Action                                   |
+| -------- | ---------------------------------------- |
+| ⌘ ⇧ L    | Open browser in split                    |
+| ⌘ L      | Focus address bar                        |
+| ⌘ [      | Back                                     |
+| ⌘ ]      | Forward                                  |
+| ⌘ R      | Reload page                              |
+| ⌥ ⌘ I    | Toggle Developer Tools (Safari default)  |
+| ⌥ ⌘ C    | Show JavaScript Console (Safari default) |
 
 ### Notifications
 
-| Shortcut | Action |
-|----------|--------|
-| ⌘ I | Show notifications panel |
-| ⌘ ⇧ U | Jump to latest unread |
+| Shortcut | Action                   |
+| -------- | ------------------------ |
+| ⌘ I      | Show notifications panel |
+| ⌘ ⇧ U    | Jump to latest unread    |
 
 ### Find
 
-| Shortcut | Action |
-|----------|--------|
-| ⌘ F | Find |
-| ⌘ G / ⌘ ⇧ G | Find next / previous |
-| ⌘ ⇧ F | Hide find bar |
-| ⌘ E | Use selection for find |
+| Shortcut    | Action                 |
+| ----------- | ---------------------- |
+| ⌘ F         | Find                   |
+| ⌘ G / ⌘ ⇧ G | Find next / previous   |
+| ⌘ ⇧ F       | Hide find bar          |
+| ⌘ E         | Use selection for find |
 
 ### Terminal
 
-| Shortcut | Action |
-|----------|--------|
-| ⌘ K | Clear scrollback |
-| ⌘ C | Copy (with selection) |
-| ⌘ V | Paste |
+| Shortcut  | Action                        |
+| --------- | ----------------------------- |
+| ⌘ K       | Clear scrollback              |
+| ⌘ C       | Copy (with selection)         |
+| ⌘ V       | Paste                         |
 | ⌘ + / ⌘ - | Increase / decrease font size |
-| ⌘ 0 | Reset font size |
+| ⌘ 0       | Reset font size               |
 
 ### Window
 
-| Shortcut | Action |
-|----------|--------|
-| ⌘ ⇧ N | New window |
-| ⌘ , | Settings |
-| ⌘ ⇧ , | Reload configuration |
-| ⌘ Q | Quit |
+| Shortcut | Action               |
+| -------- | -------------------- |
+| ⌘ ⇧ N    | New window           |
+| ⌘ ,      | Settings             |
+| ⌘ ⇧ ,    | Reload configuration |
+| ⌘ Q      | Quit                 |
 
 ## Nightly Builds
 
@@ -241,6 +241,7 @@ Report nightly bugs on [GitHub Issues](https://github.com/manaflow-ai/cmux/issue
 ## Session restore (current behavior)
 
 On relaunch, cmux currently restores app layout and metadata only:
+
 - Window/workspace/pane layout
 - Working directories
 - Terminal scrollback (best effort)
