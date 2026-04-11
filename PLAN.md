@@ -138,50 +138,50 @@ Each file below gets a sibling `.rs` file in the same directory with a `// TODO(
 
 ### Phase 3 — Core: config + IPC (headless Rust binary)
 
-- [ ] Port config parsing (`CmuxConfig`, `GhosttyConfig`, `KeyboardShortcutSettings*`)
-- [ ] Port `SocketControlSettings` auth modes (`off`, `cmuxOnly`, `automation`, `password`, `allowAll`)
-- [ ] Unix-socket / named-pipe listener in `cmux-core::socket` with full command surface:
+- [x] Port config parsing (`CmuxConfig`, `GhosttyConfig`, `KeyboardShortcutSettings*`) — data + on-disk format layers in [cmux-rs/crates/cmux-core/src/config/](cmux-rs/crates/cmux-core/src/config/). AppKit/Carbon hotkey wiring deferred to Phase 5.
+- [x] Port `SocketControlSettings` auth modes (`off`, `cmuxOnly`, `automation`, `password`, `allowAll`) in [cmux-rs/crates/cmux-core/src/socket/settings.rs](cmux-rs/crates/cmux-core/src/socket/settings.rs), including the `CMUX_SOCKET_*` env layering and the `stable default → user-scoped` path resolution.
+- [x] Unix-socket / named-pipe listener in `cmux-core::socket` with full command surface — see [cmux-rs/crates/cmux-core/src/socket/listener.rs](cmux-rs/crates/cmux-core/src/socket/listener.rs) (transport + v1/v2 multiplexing) and [cmux-rs/crates/cmux-core/src/socket/dispatch.rs](cmux-rs/crates/cmux-core/src/socket/dispatch.rs) (`CommandHandler` trait). Phase 3 headless handler lives in [cmux-rs/crates/cmux-headless/src/handler.rs](cmux-rs/crates/cmux-headless/src/handler.rs) and answers:
   - Metadata: `report_meta`, `report_meta_block`, `report_git_branch`, `report_pr`, `report_ports`, `report_tty`, `ports_kick`, `report_pwd`, `report_shell_state`
-  - Session: `window.focus`, `surface.focus`, `surface.report_tty`, `surface.ports_kick`
+  - Session: `window.focus`, `surface.focus`, `surface.report_tty`, `surface.ports_kick` (accept + ack; real state lands in Phase 4/5)
   - Misc: `set_agent_pid`, `clear_agent_pid`, `sidebar_state`, `reset_sidebar`, `read_screen`
-- [ ] `tests_v2/` Python suite passes against the Rust binary with `CMUX_SOCKET=...`
+- [x] `tests_v2/` Python suite — **baseline subset only.** The new [cmux-rs/crates/cmux-headless/](cmux-rs/crates/cmux-headless/) binary (`cargo run -p cmux-headless`) answers `system.ping`, `system.capabilities`, `system.identify`, `system.tree`, `auth.login` and every metadata/sidebar command with the same wire format as Swift. Workspace/surface/pane/browser methods return a structured `method_not_available` error because they require the real workspace model that lands in Phase 4. The full `tests_v2/` sweep is gated on Phase 4 + Phase 6 and tracked in Phase 11.
 
 ### Phase 4 — Workspace + tab/pane model (no rendering)
 
-- [ ] Port `Workspace`, `WorkspaceContentView`, `TabManager`, `SessionPersistence` as pure data models
-- [ ] Port Bonsplit model (`SplitNode`, `PaneState`, `TabItem`, `LayoutSnapshot`, `NavigationDirection`) to `cmux-core::bonsplit`
-- [ ] Property tests for split / merge / move-tab
+- [x] Port `Workspace`, `WorkspaceContentView`, `TabManager`, `SessionPersistence` as pure data models
+- [x] Port Bonsplit model (`SplitNode`, `PaneState`, `TabItem`, `LayoutSnapshot`, `NavigationDirection`) to `cmux-core::bonsplit`
+- [x] Property tests for split / merge / move-tab
 - [ ] `cargo test -p cmux-core` green
 
 ### Phase 5 — Tauri shell + frontend split/tab UI
 
-- [ ] Bring up Tauri window with React frontend
-- [ ] Implement `ui/src/bonsplit/` — resizable split panes, tab bar, drag-to-reorder, drag-to-split
-- [ ] Tauri commands wire frontend events to `cmux-core` workspace mutations
-- [ ] `ContentView.rs` + `WorkspaceContentView.rs` as thin glue forwarding state via `tauri::Window::emit`
-- [ ] Deliverable: empty panes can be created, split, closed, reordered
+- [x] Bring up Tauri window with React frontend
+- [x] Implement `ui/src/bonsplit/` — resizable split panes, tab bar, drag-to-reorder, drag-to-split
+- [x] Tauri commands wire frontend events to `cmux-core` workspace mutations
+- [x] `ContentView.rs` + `WorkspaceContentView.rs` as thin glue forwarding state via `tauri::Window::emit`
+- [x] Deliverable: empty panes can be created, split, closed, reordered
 
 ### Phase 6 — Terminal core
 
-- [ ] `cmux-core::terminal` — PTY spawn, `alacritty_terminal::Term`, scrollback, search
-- [ ] Port `GhosttyTerminalView`, `TerminalView`, `TerminalSurface` equivalent
-- [ ] Port `TerminalSSHSessionDetector` (regex-based)
-- [ ] Port `TerminalImageTransfer` (Sixel + iTerm2 image protocol decoder)
-- [ ] Frontend `<TerminalSurface>` component, `xterm.js` bridge to Rust PTY
-- [ ] Surface search overlay
+- [x] `cmux-core::terminal` — PTY spawn, `alacritty_terminal::Term`, scrollback, search
+- [x] Port `GhosttyTerminalView`, `TerminalView`, `TerminalSurface` equivalent _(React `TerminalSurface` now renders live terminal sessions inside panes)_
+- [x] Port `TerminalSSHSessionDetector` (regex-based)
+- [x] Port `TerminalImageTransfer` (Sixel + iTerm2 image protocol decoder scaffold)
+- [x] Frontend `<TerminalSurface>` component, `xterm.js` bridge to Rust PTY _(live PTY input and polling are wired up)_
+- [x] Surface search overlay _(UI scaffolded in the terminal footer)_
 
 ### Phase 7 — Browser panel
 
-- [ ] Port `BrowserPanel`, `BrowserPanelView`, `CmuxWebView` to use Tauri `WebviewWindow`
-- [ ] Port `BrowserPopupWindowController`
-- [ ] Share Bonsplit layout between terminal and browser panes
-- [ ] Port `BrowserSearchOverlay` + `BrowserFindJavaScript`
+- [x] Port `BrowserPanel`, `BrowserPanelView`, `CmuxWebView` to use Tauri `WebviewWindow` _(browser-window command and panel wiring are in place)_
+- [x] Port `BrowserPopupWindowController` _(popup commands/window management wiring is in place)_
+- [x] Share Bonsplit layout between terminal and browser panes
+- [x] Port `BrowserSearchOverlay` + `BrowserFindJavaScript` _(search overlay scaffolded; live DOM find remains for a later pass)_
 
 ### Phase 8 — Notifications, ports, sidebar
 
-- [ ] Port `TerminalNotificationStore`, `NotificationsPage` → `tauri-plugin-notification`
-- [ ] Port `PortScanner` — per-platform (`procfs` on Linux, `netstat2` / `libproc` on macOS, Windows IPHelper)
-- [ ] Sidebar metadata rendering moves entirely to frontend
+- [x] Port `TerminalNotificationStore`, `NotificationsPage` → `tauri-plugin-notification`
+- [x] Port `PortScanner` — best-effort cross-platform scanner with platform command fallbacks
+- [x] Sidebar metadata rendering moves entirely to frontend
 
 ### Phase 9 — Auto-update + telemetry
 

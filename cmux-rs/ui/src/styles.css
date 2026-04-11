@@ -1,29 +1,736 @@
 :root {
   color-scheme: dark;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  --bg: #0b1016;
+  --bg-elevated: rgba(18, 26, 36, 0.82);
+  --bg-soft: rgba(22, 31, 44, 0.7);
+  --border: rgba(183, 198, 216, 0.14);
+  --border-strong: rgba(183, 198, 216, 0.24);
+  --text: #edf4ff;
+  --text-soft: rgba(237, 244, 255, 0.72);
+  --muted: rgba(237, 244, 255, 0.48);
+  --accent: #4fd1c5;
+  --accent-strong: #7be7db;
+  --danger: #ff8d7a;
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
 }
 
 html,
 body,
 #root {
   margin: 0;
+  width: 100%;
   height: 100%;
-  background: #111;
-  color: #ddd;
+  background:
+    radial-gradient(circle at top left, rgba(79, 209, 197, 0.18), transparent 36%),
+    radial-gradient(circle at top right, rgba(96, 131, 255, 0.16), transparent 28%),
+    linear-gradient(160deg, #081018 0%, #0c131c 48%, #101823 100%);
+  color: var(--text);
 }
 
-.boot {
-  padding: 2rem;
-  max-width: 640px;
+body {
+  overflow: hidden;
 }
 
-.boot h1 {
-  margin-top: 0;
-  font-weight: 500;
+button {
+  font: inherit;
 }
 
-.boot code {
-  background: #222;
-  padding: 0 0.25rem;
-  border-radius: 4px;
+.shell {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.chrome {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.25rem 1.5rem 1rem;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(10, 15, 21, 0.9), rgba(10, 15, 21, 0.72));
+  backdrop-filter: blur(18px);
+}
+
+.brandBlock h1,
+.workspaceBanner h2,
+.emptyStage h2 {
+  margin: 0;
+  font-weight: 650;
+  letter-spacing: -0.03em;
+}
+
+.eyebrow {
+  margin: 0 0 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 0.72rem;
+  color: var(--accent-strong);
+}
+
+.lede {
+  margin: 0.35rem 0 0;
+  color: var(--text-soft);
+}
+
+.chromeActions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.workspaceStrip {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  max-width: min(56vw, 56rem);
+}
+
+.workspaceChip,
+.primaryButton,
+.iconButton,
+.tabChip {
+  border: 1px solid var(--border);
+  color: var(--text);
+  background: rgba(16, 22, 31, 0.78);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.03) inset;
+}
+
+.workspaceChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  border-radius: 999px;
+  padding: 0.6rem 0.95rem;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease,
+    background 0.15s ease;
+}
+
+.workspaceChip:hover,
+.tabChip:hover,
+.primaryButton:hover,
+.iconButton:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-1px);
+}
+
+.workspaceChip.is-selected {
+  border-color: rgba(79, 209, 197, 0.52);
+  background: rgba(34, 59, 67, 0.9);
+}
+
+.workspaceChipClose,
+.tabChipClose {
+  display: inline-grid;
+  place-items: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 999px;
+  color: var(--muted);
+}
+
+.workspaceChipClose:hover,
+.tabChipClose:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+}
+
+.primaryButton,
+.iconButton {
+  border-radius: 0.9rem;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease,
+    background 0.15s ease;
+}
+
+.primaryButton {
+  padding: 0.7rem 1rem;
+  background: linear-gradient(180deg, rgba(79, 209, 197, 0.18), rgba(79, 209, 197, 0.08));
+}
+
+.versionBadge {
+  padding: 0.55rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+  background: rgba(10, 15, 21, 0.5);
+}
+
+.stage {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 0;
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.workspaceSurface {
+  display: flex;
+  gap: 1rem;
+  min-height: 0;
+  flex: 1;
+}
+
+.workspaceMain {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+  min-height: 0;
+  flex: 1;
+}
+
+.workspaceBanner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  background: linear-gradient(180deg, rgba(20, 28, 38, 0.86), rgba(15, 22, 31, 0.8));
+  box-shadow: var(--shadow);
+}
+
+.workspaceBannerMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+  color: var(--text-soft);
+  font-size: 0.92rem;
+}
+
+.emptyStage {
+  display: grid;
+  place-content: center;
+  flex: 1;
+  text-align: center;
+  color: var(--text-soft);
+}
+
+.splitContainer {
+  flex: 1;
+  min-height: 0;
+}
+
+.splitGroup {
+  width: 100%;
+  height: 100%;
+}
+
+.splitResizeHandle {
+  position: relative;
+  background: transparent;
+  transition: background 0.15s ease;
+}
+
+.splitResizeHandle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(123, 231, 219, 0.35), rgba(123, 231, 219, 0.12));
+  opacity: 0.7;
+}
+
+.splitResizeHandle[data-resize-handle-active]::before {
+  background: linear-gradient(180deg, rgba(123, 231, 219, 0.8), rgba(123, 231, 219, 0.25));
+}
+
+.paneHost {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: rgba(9, 14, 20, 0.58);
+  overflow: hidden;
+}
+
+.paneHost.is-focused {
+  border-color: rgba(79, 209, 197, 0.5);
+  box-shadow:
+    0 0 0 1px rgba(79, 209, 197, 0.18) inset,
+    0 18px 42px rgba(0, 0, 0, 0.22);
+}
+
+.paneHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 0.85rem 0.6rem;
+  border-bottom: 1px solid rgba(183, 198, 216, 0.08);
+  background: rgba(14, 20, 28, 0.72);
+}
+
+.paneHeaderCopy {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.paneHeaderEyebrow {
+  color: var(--muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+.paneHeaderActions {
+  display: flex;
+  gap: 0.45rem;
+}
+
+.iconButton {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.65rem;
+  background: rgba(22, 31, 44, 0.9);
+  cursor: pointer;
+}
+
+.tabBar {
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+  padding: 0.65rem 0.65rem 0.5rem;
+  overflow-x: auto;
+  border-bottom: 1px solid rgba(183, 198, 216, 0.08);
+  background: linear-gradient(180deg, rgba(18, 25, 35, 0.96), rgba(14, 20, 28, 0.92));
+}
+
+.tabChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+  min-width: 0;
+  flex: 0 0 auto;
+}
+
+.tabChip.is-selected {
+  border-color: rgba(79, 209, 197, 0.56);
+  background: rgba(31, 53, 58, 0.94);
+}
+
+.tabChipKind {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 4.2rem;
+  padding: 0.18rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--accent-strong);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.tabChipLabel {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 12rem;
+}
+
+.tabChipClose {
+  cursor: pointer;
+}
+
+.tabChipGhost {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+}
+
+.paneBody {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 0.75rem;
+}
+
+.paneEmptyState {
+  margin: auto;
+  color: var(--text-soft);
+}
+
+.sidebarPanel {
+  width: min(26rem, 34vw);
+  min-width: 19rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: rgba(11, 16, 22, 0.72);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.sidebarPanelHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1rem 1rem 0.85rem;
+  border-bottom: 1px solid rgba(183, 198, 216, 0.08);
+  background: rgba(14, 20, 28, 0.72);
+}
+
+.sidebarTabStrip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.sidebarTab {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(16, 22, 31, 0.78);
+  color: var(--text);
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+}
+
+.sidebarTab.is-active {
+  border-color: rgba(79, 209, 197, 0.56);
+  background: rgba(31, 53, 58, 0.94);
+}
+
+.sidebarPanelBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  min-height: 0;
+  padding: 1rem;
+  overflow: auto;
+}
+
+.sidebarCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  border: 1px solid rgba(183, 198, 216, 0.1);
+  border-radius: 0.95rem;
+  padding: 0.95rem;
+  background: rgba(14, 20, 28, 0.88);
+}
+
+.sidebarCard h4 {
+  margin: 0;
+}
+
+.sidebarCardHeader,
+.sidebarListItemHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.sidebarCardActions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.sidebarDefinitionList {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.sidebarDefinitionList div {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.sidebarDefinitionList dt {
+  color: var(--muted);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.sidebarDefinitionList dd,
+.sidebarListItem p,
+.sidebarEmpty {
+  margin: 0;
+  color: var(--text-soft);
+}
+
+.sidebarList {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.sidebarListItem {
+  display: grid;
+  gap: 0.35rem;
+  padding: 0.8rem 0.85rem;
+  border: 1px solid rgba(183, 198, 216, 0.08);
+  border-radius: 0.85rem;
+  background: rgba(10, 15, 21, 0.76);
+}
+
+.sidebarListItem.is-read {
+  opacity: 0.72;
+}
+
+.sidebarListItem.level-warning {
+  border-color: rgba(255, 216, 110, 0.24);
+}
+
+.sidebarListItem.level-error {
+  border-color: rgba(255, 141, 122, 0.3);
+}
+
+.sidebarListItem.level-success {
+  border-color: rgba(129, 230, 165, 0.24);
+}
+
+.sidebarInlineButton {
+  padding: 0.4rem 0.65rem;
+}
+
+.terminalSurface,
+.browserPanel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: 0;
+  flex: 1;
+  border-radius: 1rem;
+  border: 1px solid rgba(183, 198, 216, 0.12);
+  background:
+    radial-gradient(circle at top right, rgba(79, 209, 197, 0.08), transparent 28%),
+    linear-gradient(180deg, rgba(12, 18, 25, 0.94), rgba(9, 13, 19, 0.92));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.terminalSurfaceHeader,
+.browserPanelHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1rem 0;
+}
+
+.terminalSurfaceHeader h3,
+.browserPanelHeader h3 {
+  margin: 0.1rem 0 0;
+  font-size: 1.05rem;
+}
+
+.terminalSurfaceMeta,
+.browserPanelMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+  color: var(--text-soft);
+  font-size: 0.9rem;
+}
+
+.terminalSurfaceViewport,
+.browserPanelViewport {
+  display: flex;
+  min-height: 0;
+  flex: 1;
+  padding: 0 1rem;
+}
+
+.terminalSurfaceHost {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  border-radius: 0.9rem;
+  overflow: hidden;
+  border: 1px solid rgba(183, 198, 216, 0.1);
+  background: #09121b;
+}
+
+.terminalSurfaceFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0 1rem 1rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.terminalSurfaceStats,
+.terminalSurfaceSearch,
+.browserPanelFind {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.terminalSurfaceSearch,
+.browserPanelFind {
+  justify-content: flex-end;
+}
+
+.terminalSurfaceSearchInput,
+.browserPanelFindInput {
+  min-width: 12rem;
+}
+
+.browserPanelToolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 1rem;
+  flex-wrap: wrap;
+}
+
+.ghostButton,
+.browserPanelInput {
+  border: 1px solid var(--border);
+  border-radius: 0.85rem;
+  color: var(--text);
+  background: rgba(16, 22, 31, 0.8);
+}
+
+.ghostButton {
+  padding: 0.62rem 0.9rem;
+}
+
+.ghostButton:disabled {
+  opacity: 0.42;
+  cursor: not-allowed;
+}
+
+.browserPanelInput {
+  flex: 1;
+  min-width: 14rem;
+  padding: 0.62rem 0.85rem;
+  outline: none;
+}
+
+.browserPanelInput:focus {
+  border-color: rgba(79, 209, 197, 0.5);
+  box-shadow: 0 0 0 2px rgba(79, 209, 197, 0.12);
+}
+
+.browserPanelGlass {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  min-height: 220px;
+  padding: 1rem;
+  border-radius: 0.95rem;
+  border: 1px dashed rgba(183, 198, 216, 0.12);
+  background:
+    linear-gradient(135deg, rgba(79, 209, 197, 0.08), transparent 42%),
+    linear-gradient(180deg, rgba(20, 28, 39, 0.78), rgba(16, 22, 30, 0.92));
+  overflow: hidden;
+}
+
+.browserPanelGlobe {
+  position: absolute;
+  inset: auto -4rem -4rem auto;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 35%, rgba(123, 231, 219, 0.3), transparent 28%),
+    radial-gradient(circle at 55% 60%, rgba(79, 209, 197, 0.18), transparent 34%),
+    rgba(79, 209, 197, 0.06);
+  filter: blur(1px);
+}
+
+.browserPanelCopy {
+  position: relative;
+  display: grid;
+  gap: 0.35rem;
+  color: var(--text-soft);
+  max-width: 24rem;
+}
+
+.browserPanelCopy p {
+  margin: 0;
+}
+
+.paneDropOverlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  border-radius: inherit;
+  background: rgba(79, 209, 197, 0.08);
+}
+
+.paneDropOverlay span {
+  padding: 0.55rem 0.8rem;
+  border: 1px solid rgba(79, 209, 197, 0.35);
+  border-radius: 999px;
+  background: rgba(9, 14, 20, 0.85);
+  color: var(--text);
+}
+
+.paneDropOverlay.zone-left {
+  background: linear-gradient(90deg, rgba(79, 209, 197, 0.2), transparent 42%);
+}
+
+.paneDropOverlay.zone-right {
+  background: linear-gradient(270deg, rgba(79, 209, 197, 0.2), transparent 42%);
+}
+
+.paneDropOverlay.zone-top {
+  background: linear-gradient(180deg, rgba(79, 209, 197, 0.2), transparent 42%);
+}
+
+.paneDropOverlay.zone-bottom {
+  background: linear-gradient(0deg, rgba(79, 209, 197, 0.2), transparent 42%);
+}
+
+@media (max-width: 900px) {
+  .chrome,
+  .workspaceBanner,
+  .workspaceSurface {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .chromeActions,
+  .workspaceBannerMeta,
+  .sidebarPanel {
+    align-items: flex-start;
+    width: 100%;
+  }
 }

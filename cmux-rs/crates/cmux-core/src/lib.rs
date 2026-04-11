@@ -6,7 +6,10 @@
 //! sibling `cmux-app` crate and wires these modules to a React frontend.
 
 pub mod bonsplit;
+pub mod browser;
 pub mod config;
+pub mod notifications;
+pub mod ports;
 pub mod pane;
 pub mod socket;
 pub mod tab;

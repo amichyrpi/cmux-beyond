@@ -4,6 +4,16 @@
 //! `cmux-rs/ui/`. This module only exposes Tauri command handlers that the
 //! frontend calls to mutate workspace state.
 
-// TODO(rewrite): port from ContentView.swift
+use tauri::{Emitter, Window};
+
+use crate::state::{state_event_name, AppSnapshot};
+
+// Keep the file anchored in the mirror layout.
 #[allow(dead_code)]
 pub(crate) fn __link() {}
+
+/// Emit the full app snapshot to the main Tauri window.
+#[allow(dead_code)]
+pub(crate) fn emit_app_state(window: &Window, snapshot: &AppSnapshot) -> tauri::Result<()> {
+    window.emit(state_event_name(), snapshot.clone())
+}
